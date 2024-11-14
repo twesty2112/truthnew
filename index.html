@@ -1,31 +1,49 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative News Website</title>
+    <meta name="description" content="Latest breaking news and updates from the United States.">
+    <title>Breaking News - America</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Today's News</h1>
+        <h1>America's Breaking News</h1>
+        <nav>
+            <ul>
+                <li><a href="#politics">Politics</a></li>
+                <li><a href="#latest-updates">Latest Updates</a></li>
+                <li><a href="#tech">Technology</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <article class="news-item">
-            <h2>Breaking News Headline</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet consectetur dolor in elementum.</p>
+        <!-- Politics Article -->
+        <article id="politics" class="news-item">
+            <img src="images/politics.jpg" alt="Politics image" class="news-image">
+            <h2>President Announces New Economic Plan</h2>
+            <p>In a bid to boost job growth and improve the economy, President Joe Biden unveiled a new economic initiative aimed at investing in American infrastructure and clean energy.</p>
         </article>
-        <article class="news-item">
-            <h2>Latest Updates</h2>
-            <p>Quisque vel turpis id lacus interdum volutpat. Suspendisse potenti.</p>
+
+        <!-- Latest Updates Article -->
+        <article id="latest-updates" class="news-item">
+            <img src="images/latest-updates.jpg" alt="Latest updates image" class="news-image">
+            <h2>Massive Wildfires Continue to Ravage the West Coast</h2>
+            <p>Thousands of families have been displaced as wildfires in California, Oregon, and Washington State continue to spread, with emergency services working tirelessly to combat the flames.</p>
         </article>
-        <article class="news-item">
-            <h2>Technology Innovations</h2>
-            <p>Curabitur vehicula odio in quam tempor, a ultricies purus tincidunt.</p>
+
+        <!-- Technology Article -->
+        <article id="tech" class="news-item">
+            <img src="images/technology.jpg" alt="Technology innovations image" class="news-image">
+            <h2>Apple Launches New iPhone Model with Groundbreaking Features</h2>
+            <p>Apple's latest iPhone release promises major upgrades, including a more powerful processor, enhanced camera capabilities, and longer battery life, keeping it at the forefront of smartphone innovation.</p>
         </article>
     </main>
+
     <footer>
-        <p>&copy; 2024 News Website</p>
+        <p>&copy; 2024 Breaking News America</p>
     </footer>
 </body>
 </html>

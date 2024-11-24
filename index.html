@@ -1,211 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597819005409997"
-     crossorigin="anonymous"></script>
-     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Truth Newspaper</title>
-    <style>
-        /* General Reset and Font Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597819005409997"
+        crossorigin="anonymous"></script>
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-            padding: 0 20px;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Truth Newspaper</title>
 
-        /* Header Styling */
-        header {
-            background-color: #003C6D;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
+    <!-- Importing Merriweather Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General Reset and Font Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        h1 {
-            font-size: 2.8em;
-            color: white;
-            letter-spacing: 1px;
-            line-height: 1.2;
-        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
 
-        /* Navigation Bar */
-        .nav-bar {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+        /* Header Styling with Merriweather Font */
+        header {
+            background-color: #004e92; /* Deep blue */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
 
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            margin: 0 10px;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+        h1 {
+            font-family: 'Merriweather', serif; /* Applying Merriweather font */
+            font-size: 3em;
+            color: white;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
 
-        .nav-bar a:hover {
-            background-color: #575757;
-        }
+        /* Navigation Bar */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #006bb3; /* Blue background */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
 
-        /* Article and Main Content */
-        article {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-        h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: #003C6D;
-        }
+        .nav-bar a:hover {
+            background-color: #004e92; /* Darker blue on hover */
+        }
 
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #555;
-            line-height: 1.6;
-        }
+        /* Article and Main Content */
+        article {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
 
-        .highlight {
-            color: #1d6f49;
-            font-weight: bold;
-        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #004e92; /* Matching deep blue */
+        }
 
-        /* Call to Action (CTA) Button */
-        .cta {
-            background-color: #003C6D;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.4em;
-            border-radius: 5px;
-            margin-top: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
 
-        .cta:hover {
-            background-color: #015a8d;
-        }
+        .highlight {
+            color: #006bb3; /* Highlighted text in a lighter blue */
+            font-weight: bold;
+        }
 
-        /* Footer Styling */
-        .footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-        }
+        /* Call to Action (CTA) Button */
+        .cta {
+            background-color: #004e92; /* Matching blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.4em;
+            border-radius: 5px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 0 15px;
-            }
+        .cta:hover {
+            background-color: #006bb3; /* Lighter blue on hover */
+        }
 
-            header h1 {
-                font-size: 2.2em;
-            }
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
 
-            article {
-                padding: 20px;
-            }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 15px;
+            }
 
-            .cta {
-                font-size: 1.2em;
-                padding: 15px;
-            }
-        }
-    </style> 
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            article {
+                padding: 20px;
+            }
+
+            .cta {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+        }
+    </style> 
 </head>
 <body>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597819005409997"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
 <!-- Truth Newspaper Header -->
 <header>
-    <h1>Truth Newspaper</h1>
+    <h1>Truth Newspaper</h1>
 </header>
 
 <!-- Navigation Bar with anchor links -->
 <div class="nav-bar">
-    <a href="#stocks">Stocks</a>
-    <a href="#technology">Technology</a>
-    <a href="#news">News</a>
+    <a href="#stocks">Stocks</a>
+    <a href="#technology">Technology</a>
+    <a href="#news">News</a>
 </div>
 
 <!-- Individual Sections with corresponding IDs -->
 <div id="stocks">
-    <h2>Stocks Section</h2>
-    <p><!-- Main Article Below Sections -->
+    <h2>Stocks Section</h2>
+    <p><!-- Main Article Below Sections -->
 <article>
-    <h2>Why Palantir is Going to Make You a Millionaire</h2>
-    <p>When it comes to finding the next big opportunity in tech, <strong>Palantir Technologies (PLTR)</strong> is a name that should be at the top of your list. This revolutionary company is making waves in the world of data analytics, and if you’re looking for a stock that could significantly boost your wealth, Palantir might just be your ticket to financial success.</p>
+    <h2>Why Palantir is Going to Make You a Millionaire</h2>
+    <p>When it comes to finding the next big opportunity in tech, <strong>Palantir Technologies (PLTR)</strong> is a name that should be at the top of your list. This revolutionary company is making waves in the world of data analytics, and if you’re looking for a stock that could significantly boost your wealth, Palantir might just be your ticket to financial success.</p>
 
-    <h2>1. Palantir’s Dominance in Big Data Analytics</h2>
-    <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data. Whether it’s predicting market trends, improving healthcare outcomes, or solving national security issues, Palantir’s software has proven its value time and time again.</p>
-    
-    <p>Palantir’s ability to help organizations leverage <strong>data-driven insights</strong> is unmatched, and as the world becomes increasingly reliant on data, Palantir’s market potential grows exponentially.</p>
+    <h2>1. Palantir’s Dominance in Big Data Analytics</h2>
+    <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data. Whether it’s predicting market trends, improving healthcare outcomes, or solving national security issues, Palantir’s software has proven its value time and time again.</p>
+    
+    <p>Palantir’s ability to help organizations leverage <strong>data-driven insights</strong> is unmatched, and as the world becomes increasingly reliant on data, Palantir’s market potential grows exponentially.</p>
 
-    <h2>2. Long-Term, Lucrative Contracts</h2>
-    <p>One of the most compelling reasons to invest in Palantir is its <strong>unique business model</strong>. Unlike most tech companies that rely on short-term sales, Palantir has a reputation for securing <strong>long-term, high-value contracts</strong>. Many of its clients sign deals lasting 5 to 10 years, ensuring a steady stream of revenue for the company.</p>
-    
-    <p>The company’s work with the <strong>U.S. government</strong> (including the Department of Defense, CIA, and FBI) has provided a solid financial foundation, and its growing presence in the <strong>commercial sector</strong> ensures that the company’s revenues will continue to rise.</p>
+    <h2>2. Long-Term, Lucrative Contracts</h2>
+    <p>One of the most compelling reasons to invest in Palantir is its <strong>unique business model</strong>. Unlike most tech companies that rely on short-term sales, Palantir has a reputation for securing <strong>long-term, high-value contracts</strong>. Many of its clients sign deals lasting 5 to 10 years, ensuring a steady stream of revenue for the company.</p>
+    
+    <p>The company’s work with the <strong>U.S. government</strong> (including the Department of Defense, CIA, and FBI) has provided a solid financial foundation, and its growing presence in the <strong>commercial sector</strong> ensures that the company’s revenues will continue to rise.</p>
 
-    <h2>3. Expanding in Commercial Markets</h2>
-    <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. From global corporations like <strong>Ford</strong> and <strong>Airbus</strong> to healthcare giants like <strong>Pfizer</strong>, Palantir’s software is becoming essential for enterprises looking to tap into the power of big data.</p>
+    <h2>3. Expanding in Commercial Markets</h2>
+    <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. From global corporations like <strong>Ford</strong> and <strong>Airbus</strong> to healthcare giants like <strong>Pfizer</strong>, Palantir’s software is becoming essential for enterprises looking to tap into the power of big data.</p>
 
-    <p>This shift to the commercial market means that Palantir isn’t just dependent on government contracts anymore. The company has the potential to capture a massive share of the multi-trillion-dollar data analytics market, which could result in explosive growth in the coming years.</p>
+    <p>This shift to the commercial market means that Palantir isn’t just dependent on government contracts anymore. The company has the potential to capture a massive share of the multi-trillion-dollar data analytics market, which could result in explosive growth in the coming years.</p>
 
-    <h2>4. Artificial Intelligence and Machine Learning: The Future is Now</h2>
-    <p>Palantir is more than just a data analytics company — it’s also a major player in the world of <strong>artificial intelligence</strong> and <strong>machine learning</strong>. By integrating AI and ML into its platforms, Palantir is helping businesses make <strong>predictive decisions</strong> and uncover <strong>insights</strong> that were previously impossible to achieve.</p>
+    <h2>4. Artificial Intelligence and Machine Learning: The Future is Now</h2>
+    <p>Palantir is more than just a data analytics company — it’s also a major player in the world of <strong>artificial intelligence</strong> and <strong>machine learning</strong>. By integrating AI and ML into its platforms, Palantir is helping businesses make <strong>predictive decisions</strong> and uncover <strong>insights</strong> that were previously impossible to achieve.</p>
 
-    <p>As AI and machine learning become more mainstream across industries, Palantir’s role as a leader in this space positions it for massive growth. Whether it’s improving healthcare diagnoses, optimizing supply chains, or predicting stock market trends, Palantir’s software is <strong>at the cutting edge</strong> of technological innovation.</p>
+    <p>As AI and machine learning become more mainstream across industries, Palantir’s role as a leader in this space positions it for massive growth. Whether it’s improving healthcare diagnoses, optimizing supply chains, or predicting stock market trends, Palantir’s software is <strong>at the cutting edge</strong> of technological innovation.</p>
 
-    <div class="cta">
-        <p>Ready to invest in Palantir's future? Don't miss out on this opportunity!</p>
-    </div>
+    <div class="cta">
+        <p>Ready to invest in Palantir's future? Don't miss out on this opportunity!</p>
+    </div>
 </article>
 
 <div class="footer">
-    <p>Disclaimer: This content is for informational purposes only and should not be considered as financial advice. Always do your own research before making investment decisions.</p>
+    <p>Disclaimer: This content is for informational purposes only and should not be considered as financial advice. Always do your own research before making investment decisions.</p>
 </div></p>
 </div>
 
 <div id="technology">
-    <h2>Technology Section</h2>
-    <p>This section covers the latest trends and innovations in technology.</p>
+    <h2>Technology Section</h2>
+    <p>This section covers the latest trends and innovations in technology.</p>
+    <article>
+        <h2>AI Breakthroughs: Shaping the Future</h2>
+        <p>Recent breakthroughs in artificial intelligence have led to significant advancements in machine learning and automation. AI systems are now able to outperform human experts in a variety of fields, from healthcare to finance. One of the most notable developments has been in AI models that understand and generate human language, making them useful in everything from customer service to content creation. These new AI tools are enhancing productivity and transforming industries, with companies like OpenAI and Google leading the way in their development.</p>
+
+        <p><strong>Looking ahead, the possibilities for AI seem limitless</strong>. In the near future, we could see AI systems that not only assist in decision-making but also drive innovations in autonomous transportation, personalized healthcare, and even creative fields like art and music. As AI continues to evolve, its integration into everyday life will likely reshape industries, redefine job roles, and create new opportunities for global economic growth.</p>
+    </article>
+
 </div>
 
 <div id="news">
-    <h2>News Section</h2>
-    <p>Stay updated with the latest global and local news.</p>
+    <h2>News Section</h2>
+    <article>
+        <h2>Elon's Genius with Trump's Leadership</h2>
+        <p>Elon Musk recently shared his vision for closer collaboration with former President Donald Trump, emphasizing the need for a unified approach to address issues like technological development, space exploration, and national security. Musk highlighted the importance of working together to build the future, particularly in sectors like renewable energy and artificial intelligence. The two leaders have expressed interest in creating an environment that fosters innovation and economic growth, with Musk committing to support initiatives that align with this shared vision.</p>
+
+        <p><strong>Looking to the future, Musk’s collaboration with Trump could pave the way for major shifts in the U.S. economy.</strong> Their combined influence on technological advancements, from space exploration to renewable energy initiatives, could drive the U.S. towards being a global leader in both innovation and sustainability. If their goals align, the partnership could foster a new era of tech-driven economic growth, positioning the nation as a dominant force in global markets.</p>
+    </article>
 </div>
-
-
 
 </body>
 </html>
+

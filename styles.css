@@ -1,119 +1,207 @@
-/* Global reset for consistency */
+/* General Reset and Font Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7f7f7;
     color: #333;
-    background-color: #f4f4f4;
+    line-height: 1.7;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Header Styles */
+/* Header Styling */
 header {
-    background-color: #003366;
-    color: #fff;
-    padding: 20px 0;
+    background: linear-gradient(45deg, #003C6D, #005F99);
+    color: white;
     text-align: center;
+    padding: 50px 20px;
+    width: 100%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
-header h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
-nav ul {
+/* Navigation Bar */
+.nav-bar {
     display: flex;
     justify-content: center;
-    list-style: none;
+    background-color: #333;
+    padding: 12px 0;
+    border-radius: 8px;
+    width: 80%;
+    margin-bottom: 40px;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
+.nav-bar a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+    padding: 15px 30px;
+    margin: 0 15px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffcc00; /* Highlight color */
+.nav-bar a:hover {
+    background-color: #005f99;
+    color: #f4f4f4;
 }
 
-/* Main Content Styles */
-main {
-    margin-top: 90px; /* Space for fixed header */
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-}
-
-/* Article Styles */
-.news-item {
-    background-color: #fff;
+/* Section Styling */
+#stocks, #technology, #news {
+    background: white;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    padding: 20px;
+    width: 80%;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Headline styling */
-.news-item h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+h2 {
+    font-size: 2.5em;
+    color: #003C6D;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
-/* Image Styling */
-.news-image {
-    width: 100%;  /* Ensures image scales to the container's width */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures the image covers the container area */
-    border-radius: 8px;
-    margin-bottom: 15px;
-    display: block; /* Ensures it's treated as a block-level element */
-}
-
-/* Paragraph Styling */
-.news-item p {
-    font-size: 16px;
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
     color: #555;
     line-height: 1.6;
-    margin-top: 10px;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+/* Article Section Styling */
+article {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    font-size: 2.4em;
+    color: #003C6D;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+article p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Highlighted Text Styling */
+.highlight {
+    color: #1d6f49;
+    font-weight: bold;
+}
+
+/* Call to Action Button */
+.cta {
+    background-color: #003C6D;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 1.4em;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #015a8d;
 }
 
 /* Footer Styling */
-footer {
-    background-color: #003366;
-    color: #fff;
+.footer {
     text-align: center;
-    padding: 10px;
-}
-
-footer p {
-    margin: 0;
+    font-size: 1em;
+    color: #777;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
-    main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+@media (max-width: 1024px) {
+    body {
+        padding: 0 15px;
+    }
+
+    .nav-bar {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    .cta {
+        font-size: 1.2em;
+        padding: 15px 30px;
+    }
+
+    article {
+        padding: 30px;
     }
 }
 
-@media (min-width: 1200px) {
-    main {
-        grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .nav-bar a {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    article {
+        padding: 20px;
+    }
+
+    .cta {
+        font-size: 1.1em;
+        padding: 15px 20px;
+    }
+
+    .footer {
+        font-size: 0.9em;
     }
 }

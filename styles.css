@@ -6,77 +6,65 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
     color: #333;
-    line-height: 1.7;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    line-height: 1.6;
+    padding: 0 20px;
 }
 
 /* Header Styling */
 header {
-    background: linear-gradient(45deg, #003C6D, #005F99);
+    background-color: #004e92; /* Deep blue */
     color: white;
     text-align: center;
-    padding: 50px 20px;
-    width: 100%;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px 20px;
     border-radius: 8px;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
 h1 {
-    font-size: 3.5em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #fff;
-    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    font-size: 3em;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1.2;
 }
 
 /* Navigation Bar */
 .nav-bar {
     display: flex;
     justify-content: center;
-    background-color: #333;
-    padding: 12px 0;
-    border-radius: 8px;
-    width: 80%;
-    margin-bottom: 40px;
+    background-color: #006bb3; /* Blue background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .nav-bar a {
     color: white;
     text-decoration: none;
-    padding: 15px 30px;
-    margin: 0 15px;
+    padding: 12px 20px;
+    margin: 0 10px;
     font-size: 1.2em;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .nav-bar a:hover {
-    background-color: #005f99;
-    color: #f4f4f4;
+    background-color: #004e92; /* Darker blue on hover */
 }
 
-/* Section Styling */
-#stocks, #technology, #news {
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    width: 80%;
-    margin-bottom: 40px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+/* Section Styles */
+section {
+    margin-bottom: 50px;
 }
 
 h2 {
     font-size: 2.5em;
-    color: #003C6D;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #004e92;
     font-weight: 700;
 }
 
@@ -85,69 +73,61 @@ p {
     margin-bottom: 20px;
     color: #555;
     line-height: 1.6;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
 }
 
-/* Article Section Styling */
+/* Article Styling */
 article {
-    background-color: #fff;
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px;
-    border-radius: 8px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-article h2 {
-    font-size: 2.4em;
-    color: #003C6D;
-    font-weight: 600;
-    margin-bottom: 20px;
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #004e92;
 }
 
-article p {
+p {
     font-size: 1.2em;
-    line-height: 1.8;
-    color: #555;
     margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
 }
 
-/* Highlighted Text Styling */
 .highlight {
-    color: #1d6f49;
+    color: #006bb3;
     font-weight: bold;
 }
 
-/* Call to Action Button */
+/* Call to Action (CTA) Button */
 .cta {
-    background-color: #003C6D;
+    background-color: #004e92;
     color: white;
-    padding: 20px 40px;
+    padding: 20px;
     text-align: center;
     font-size: 1.4em;
     border-radius: 5px;
     margin-top: 30px;
     cursor: pointer;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
     transition: background-color 0.3s ease;
 }
 
 .cta:hover {
-    background-color: #015a8d;
+    background-color: #006bb3;
 }
 
 /* Footer Styling */
 .footer {
     text-align: center;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #777;
     margin-top: 50px;
     padding-top: 20px;
     border-top: 1px solid #e0e0e0;
-    width: 100%;
 }
 
 /* Responsive Design */
@@ -156,40 +136,8 @@ article p {
         padding: 0 15px;
     }
 
-    .nav-bar {
-        width: 100%;
-    }
-
-    h1 {
+    header h1 {
         font-size: 2.5em;
-    }
-
-    h2 {
-        font-size: 2.2em;
-    }
-
-    .cta {
-        font-size: 1.2em;
-        padding: 15px 30px;
-    }
-
-    article {
-        padding: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 30px 15px;
-    }
-
-    h1 {
-        font-size: 2.2em;
-    }
-
-    .nav-bar a {
-        font-size: 1em;
-        padding: 10px 15px;
     }
 
     article {
@@ -197,11 +145,68 @@ article p {
     }
 
     .cta {
-        font-size: 1.1em;
-        padding: 15px 20px;
+        font-size: 1.2em;
+        padding: 15px;
     }
 
-    .footer {
-        font-size: 0.9em;
+    .nav-bar a {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-bar a {
+        font-size: 1.1em;
+        margin: 10px 0;
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    .cta {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    footer {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0 5px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .nav-bar {
+        padding: 10px;
+    }
+
+    .cta {
+        font-size: 1em;
+        padding: 10px;
     }
 }

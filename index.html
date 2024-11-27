@@ -22,7 +22,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f8f8;
+            background-color: #f4f4f4;
             color: #333;
             line-height: 1.8;
             padding: 0 20px;
@@ -30,16 +30,17 @@
 
         /* Header Styling */
         header {
-            background-color: #ff0000; /* Washington Post red */
+            background-color: #d40000; /* Washington Post red */
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
-            border-bottom: 5px solid #333;
+            border-bottom: 5px solid #222;
+            margin-bottom: 30px;
         }
 
         h1 {
             font-family: 'Georgia', serif;
-            font-size: 3.5em;
+            font-size: 4em;
             color: white;
             margin-bottom: 0;
         }
@@ -49,49 +50,56 @@
             display: flex;
             justify-content: center;
             background-color: #222;
-            padding: 10px 0;
-            margin-top: 20px;
-            margin-bottom: 30px;
+            padding: 15px 0;
+            margin-bottom: 40px;
         }
 
         .nav-bar a {
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
-            margin: 0 15px;
-            font-size: 1.1em;
+            padding: 15px 30px;
+            margin: 0 20px;
+            font-size: 1.2em;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .nav-bar a:hover {
             background-color: #444;
         }
 
-        /* Grid Layout for Articles */
+        /* Content Section */
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr; /* First article will span the full width */
             gap: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         article {
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        /* Full-Width Article */
+        #first-article {
+            grid-column: span 1;
         }
 
         .article-img {
             width: 100%;
-            height: 200px;
+            height: 400px;
             object-fit: cover;
         }
 
         h2 {
             font-family: 'Georgia', serif;
-            font-size: 2em;
+            font-size: 2.2em;
             color: #333;
             padding: 20px;
         }
@@ -100,26 +108,34 @@
             font-size: 1em;
             color: #555;
             padding: 0 20px 20px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .highlight {
-            color: #ff0000;
+            color: #d40000;
             font-weight: bold;
         }
 
         .cta {
-            background-color: #ff0000;
+            background-color: #d40000;
             color: white;
             padding: 20px;
             text-align: center;
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-top: auto;
         }
 
         .cta:hover {
-            background-color: #cc0000;
+            background-color: #bb0000;
+        }
+
+        /* Second Column Layout for Other Articles */
+        .other-articles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Other articles are in a 2-column layout */
+            gap: 30px;
         }
 
         /* Footer Styling */
@@ -127,7 +143,7 @@
             text-align: center;
             font-size: 0.9em;
             color: #777;
-            margin-top: 40px;
+            margin-top: 50px;
             padding-top: 20px;
             border-top: 1px solid #e0e0e0;
         }
@@ -135,13 +151,17 @@
         /* Responsive Design */
         @media (max-width: 1024px) {
             .container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+            }
+
+            .other-articles {
+                grid-template-columns: 1fr; /* One column for smaller screens */
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* One column layout for mobile */
             }
 
             h1 {
@@ -169,8 +189,8 @@
 
 <!-- Content Container with Grid Layout -->
 <div class="container">
-    <!-- Stocks Section -->
-    <div id="stocks">
+    <!-- First Article (Full-Width) -->
+    <div id="first-article">
         <article>
             <img src="https://via.placeholder.com/1200x800" alt="Palantir Stock" class="article-img">
             <h2>Why Palantir is Going to Make You a Millionaire</h2>
@@ -191,26 +211,29 @@
         </article>
     </div>
 
-    <!-- Technology Section -->
-    <div id="technology">
-        <article>
-            <img src="https://via.placeholder.com/1200x800" alt="AI Technology" class="article-img">
-            <h2>AI Breakthroughs: Shaping the Future</h2>
-            <p>Recent breakthroughs in artificial intelligence have led to significant advancements in machine learning and automation. AI systems are now able to outperform human experts in a variety of fields, from healthcare to finance.</p>
+    <!-- Other Articles -->
+    <div class="other-articles">
+        <!-- Technology Section -->
+        <div id="technology">
+            <article>
+                <img src="https://via.placeholder.com/1200x800" alt="AI Technology" class="article-img">
+                <h2>AI Breakthroughs: Shaping the Future</h2>
+                <p>Recent breakthroughs in artificial intelligence have led to significant advancements in machine learning and automation. AI systems are now able to outperform human experts in a variety of fields, from healthcare to finance.</p>
 
-            <p><strong>Looking ahead, the possibilities for AI seem limitless</strong>. In the near future, AI systems will assist in decision-making, drive innovations in autonomous transportation, personalized healthcare, and even creative fields like art and music.</p>
-        </article>
-    </div>
+                <p><strong>Looking ahead, the possibilities for AI seem limitless</strong>. In the near future, AI systems will assist in decision-making, drive innovations in autonomous transportation, personalized healthcare, and even creative fields like art and music.</p>
+            </article>
+        </div>
 
-    <!-- News Section -->
-    <div id="news">
-        <article>
-            <img src="https://via.placeholder.com/1200x800" alt="Elon Musk and Donald Trump" class="article-img">
-            <h2>Elon Musk's Genius with Trump's Leadership</h2>
-            <p>Elon Musk recently shared his vision for closer collaboration with former President Donald Trump, emphasizing the need for a unified approach to address issues like technological development, space exploration, and national security.</p>
+        <!-- News Section -->
+        <div id="news">
+            <article>
+                <img src="https://via.placeholder.com/1200x800" alt="Elon Musk and Donald Trump" class="article-img">
+                <h2>Elon Musk's Genius with Trump's Leadership</h2>
+                <p>Elon Musk recently shared his vision for closer collaboration with former President Donald Trump, emphasizing the need for a unified approach to address issues like technological development, space exploration, and national security.</p>
 
-            <p><strong>The collaboration could pave the way for major shifts in the U.S. economy</strong>. Their combined influence on technological advancements, from space exploration to renewable energy initiatives, could drive the U.S. towards being a global leader in both innovation and sustainability.</p>
-        </article>
+                <p><strong>The collaboration could pave the way for major shifts in the U.S. economy</strong>. Their combined influence on technological advancements, from space exploration to renewable energy initiatives, could drive the U.S. towards being a global leader in both innovation and sustainability.</p>
+            </article>
+        </div>
     </div>
 </div>
 
@@ -221,4 +244,3 @@
 
 </body>
 </html>
-

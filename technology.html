@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technology - Truth Newspaper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.8; padding: 0 20px; }
+        header { background-color: #d40000; color: white; padding: 30px 0; text-align: center; margin-bottom: 30px; }
+        h1 { font-family: 'Georgia', serif; font-size: 4em; color: white; margin-bottom: 0; }
+        .nav-bar { display: flex; justify-content: center; background-color: #222; padding: 15px 0; }
+        .nav-bar a { color: white; text-decoration: none; padding: 15px 30px; margin: 0 20px; font-size: 1.2em; text-transform: uppercase; }
+        .nav-bar a:hover { background-color: #444; }
+
+        /* Hamburger Icon */
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger div { width: 30px; height: 3px; background-color: white; }
+
+        /* Hamburger menu dropdown */
+        .nav-bar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-bar ul li {
+            margin-right: 20px;
+        }
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        /* Show navigation links when hamburger is clicked */
+        .nav-bar.show { display: block; }
+        .nav-bar ul {
+            flex-direction: column;
+            display: none;
+        }
+        .nav-bar.show ul { display: block; }
+
+        @media (max-width: 768px) {
+            .nav-bar { display: none; flex-direction: column; }
+            .hamburger { display: flex; }
+        }
+
+        /* Breaking News Section */
+        .breaking-news {
+            background-color: #f8f8f8;
+            border-left: 5px solid #d40000;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .breaking-news h3 {
+            font-family: 'Georgia', serif;
+            font-size: 1.8em;
+            color: #d40000;
+            margin-bottom: 10px;
+        }
+
+        .breaking-news p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Truth Newspaper</h1>
+    </header>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar" id="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="news.html">News</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const navBar = document.getElementById('nav-bar');
+            navBar.classList.toggle('show');
+        }
+    </script>
+
+    <!-- Technology Section -->
+    <div class="container">
+        <h2>Technology Section</h2>
+        <p>Latest advancements in technology, from AI to innovation in digital industries.</p>
+
+        <!-- Breaking News Articles -->
+        <div class="breaking-news">
+            <h3>Breaking News: AI Revolutionizes Healthcare with Early Cancer Detection</h3>
+            <p>A new artificial intelligence system has been developed that can detect early signs of cancer with greater accuracy than human doctors. By analyzing vast datasets, the AI is able to recognize patterns and make predictions that could save countless lives.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Tesla Launches Full Self-Driving Mode</h3>
+            <p>Tesla has officially launched a fully autonomous self-driving mode in select markets. This marks a major milestone in the evolution of autonomous vehicles, with experts predicting it could revolutionize transportation.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Google Develops Quantum Computer Breakthrough</h3>
+            <p>Google has announced a major breakthrough in quantum computing, which could eventually lead to unimaginable advances in computing power. The company’s quantum computer is said to be the most powerful in the world.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Amazon Develops Drone Delivery System</h3>
+            <p>Amazon has introduced a new drone delivery system that will reduce delivery times for small packages. The drones can travel up to 10 miles and deliver packages in just 30 minutes, making it a game-changer for e-commerce logistics.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Apple's Augmented Reality Glasses to Debut Next Year</h3>
+            <p>Apple is set to unveil its new augmented reality glasses next year, offering a glimpse into the future of immersive technology. The glasses will feature cutting-edge AR capabilities, giving users the ability to interact with the digital world in new and exciting ways.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Truth Newspaper. All rights reserved.</p>
+    </footer>
+</body>
+</html>

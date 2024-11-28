@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597819005409997"
-        crossorigin="anonymous"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,7 +8,7 @@
 
     <!-- Importing Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <style>
         /* General Reset and Font Styles */
         * {
@@ -52,6 +49,8 @@
             background-color: #222;
             padding: 15px 0;
             margin-bottom: 40px;
+            flex-direction: column; /* Always display items in column */
+            align-items: center;
         }
 
         .nav-bar a {
@@ -71,7 +70,7 @@
         /* Content Section */
         .container {
             display: grid;
-            grid-template-columns: 1fr; /* First article will span the full width */
+            grid-template-columns: 1fr; /* One column layout for mobile first */
             gap: 30px;
             margin-bottom: 40px;
         }
@@ -84,11 +83,6 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-        }
-
-        /* Full-Width Article */
-        #first-article {
-            grid-column: span 1;
         }
 
         h2 {
@@ -145,13 +139,6 @@
             color: #333;
         }
 
-        /* Second Column Layout for Other Articles */
-        .other-articles {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Other articles are in a 2-column layout */
-            gap: 30px;
-        }
-
         /* Footer Styling */
         .footer {
             text-align: center;
@@ -162,7 +149,6 @@
             border-top: 1px solid #e0e0e0;
         }
 
-        /* Footer Links Styling */
         .footer-links a {
             color: #777;
             text-decoration: none;
@@ -205,36 +191,36 @@
     <h1>Truth Newspaper</h1>
 </header>
 
-<!-- Navigation Bar -->
+<!-- Navigation Bar (Always visible now) -->
 <div class="nav-bar">
-    <a href="#stocks">Stocks</a>
-    <a href="#technology">Technology</a>
-    <a href="#news">News</a>
+    <ul>
+        <li><a href="#stocks">Stocks</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#news">News</a></li>
+    </ul>
 </div>
 
 <!-- Content Container with Grid Layout -->
 <div class="container">
-    <!-- First Article (Full-Width) -->
-    <div id="first-article">
+    <!-- Stocks Article -->
+    <div id="stocks">
         <article>
             <h2>Why Palantir is Going to Make You a Millionaire</h2>
             <p>When it comes to finding the next big opportunity in tech, <strong>Palantir Technologies (PLTR)</strong> is a name that should be at the top of your list. This revolutionary company is making waves in the world of data analytics, and if you’re looking for a stock that could significantly boost your wealth, Palantir might just be your ticket to financial success.</p>
 
             <h3>1. Palantir’s Dominance in Big Data Analytics</h3>
-            <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data.</p>
+            <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data. They have been instrumental in helping organizations across sectors from healthcare to finance make data-driven decisions. In fact, Palantir has been involved in numerous high-profile projects, including helping the U.S. government fight terrorism by analyzing intelligence data.</p>
 
             <h3>2. Long-Term, Lucrative Contracts</h3>
-            <p>One of the most compelling reasons to invest in Palantir is its <strong>unique business model</strong>. Unlike most tech companies that rely on short-term sales, Palantir has a reputation for securing <strong>long-term, high-value contracts</strong>.</p>
+            <p>One of the most compelling reasons to invest in Palantir is its <strong>unique business model</strong>. Unlike most tech companies that rely on short-term sales, Palantir has a reputation for securing <strong>long-term, high-value contracts</strong>. With long-term government contracts and partnerships with major corporations, Palantir's business model is built for sustainable growth. Their contracts are often multi-year, which gives them a reliable revenue stream that many tech companies don’t have.</p>
 
             <h3>3. Expanding in Commercial Markets</h3>
-            <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. This shift means that Palantir is not just dependent on government contracts anymore.</p>
+            <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. This shift means that Palantir is not just dependent on government contracts anymore. The company is helping a growing number of businesses make sense of their own data, whether it’s analyzing customer behavior, improving supply chains, or driving efficiency in operations. As Palantir diversifies its client base, it opens the door for significant growth in the future.</p>
 
             <!-- Breaking Exciting News Section -->
             <div class="breaking-news">
                 <h3>Breaking Exciting News: Palantir's New Partnership with Tesla</h3>
-                <p>In an unexpected move, <strong>Palantir Technologies</strong> has announced a groundbreaking partnership with <strong>Tesla Inc.</strong> to integrate its data analytics software into Tesla's self-driving car systems. This new collaboration is set to revolutionize the AI-powered autonomous driving industry by enhancing real-time decision-making capabilities and vehicle performance.</p>
-
-                <p>The partnership is expected to significantly increase Palantir’s presence in the commercial AI sector and could boost its stock price in the coming months. Analysts are already predicting that this new venture will catapult Palantir to the forefront of AI innovation, driving major gains for investors.</p>
+                <p>In an unexpected move, <strong>Palantir Technologies</strong> has announced a groundbreaking partnership with <strong>Tesla Inc.</strong> to integrate its data analytics software into Tesla's self-driving car systems. The deal is set to revolutionize how autonomous vehicles process and learn from real-time data, ultimately making Tesla's self-driving technology more efficient and safer on the road. This partnership has the potential to increase Palantir's revenue streams exponentially in the coming years, further cementing its status as a leader in big data analytics.</p>
             </div>
 
             <div class="cta">
@@ -243,41 +229,41 @@
         </article>
     </div>
 
-    <!-- Technology Section -->
+    <!-- Technology Article -->
     <div id="technology">
         <article>
             <h2>AI Breakthroughs: Shaping the Future</h2>
-            <p>Recent breakthroughs in artificial intelligence have led to significant advancements in machine learning and automation. AI systems are now able to outperform human experts in a variety of fields, from healthcare to finance.</p>
+            <p>Recent breakthroughs in artificial intelligence have led to significant advancements in machine learning and automation. AI technologies are now capable of performing tasks that were once thought to be the sole domain of humans. From healthcare to finance, the impact of AI is already being felt across multiple industries.</p>
 
-            <p><strong>Looking ahead, the possibilities for AI seem limitless</strong>. In the near future, AI systems will assist in everything from diagnosing medical conditions to driving cars, completely transforming how we live and work.</p>
+            <h3>AI's Role in Healthcare Innovation</h3>
+            <p>In healthcare, AI-powered systems are being used to diagnose diseases, predict patient outcomes, and develop personalized treatment plans. One of the most promising advancements is in the field of <strong>AI-driven diagnostics</strong>. By analyzing vast amounts of medical data, AI can help doctors identify diseases such as cancer in their earliest stages, leading to better patient outcomes and saving lives.</p>
+
+            <h3>AI and the Future of Work</h3>
+            <p>AI is also playing a crucial role in shaping the future of work. Automation is transforming industries such as manufacturing, logistics, and retail, reducing the need for human labor in routine tasks while opening up new opportunities for employees to focus on more strategic and creative roles. AI-driven tools are enabling workers to become more efficient and productive, creating new pathways for innovation.</p>
+
+            <h3>AI Ethics and the Challenges Ahead</h3>
+            <p>While AI holds immense promise, it also raises important ethical questions. One of the key concerns is the potential for job displacement as machines begin to outperform humans in more tasks. Additionally, there are concerns about AI's role in surveillance and privacy. Governments, corporations, and developers must work together to create guidelines and regulations that ensure AI is developed and deployed responsibly.</p>
+
+            <div class="cta">
+                <p>Explore the Future of AI</p>
+            </div>
         </article>
     </div>
-</div>
- <!-- News Section -->
+
+    <!-- News Section -->
     <div id="news">
         <article>
             <h2>Breaking News: Donald Trump to Face New Legal Challenges as Trial Dates Approach</h2>
-            <p>In an unexpected turn of events, former President <strong>Donald Trump</strong> is once again making headlines, this time for his ongoing legal battles that have escalated to a new level. As trial dates for several high-profile cases approach, Trump’s legal team is gearing up for a complex legal defense that could have major ramifications for his political future.</p>
+            <p>In an unexpected turn of events, former President <strong>Donald Trump</strong> is once again making headlines as he faces a new set of legal challenges. With trial dates approaching for multiple cases, the political landscape in the United States is bracing for what could be a pivotal moment in American history.</p>
 
-            <p><strong>The legal challenges</strong> stem from various allegations, including fraud, obstruction of justice, and attempts to interfere with the results of the 2020 presidential election. These cases have captivated the nation, with many watching closely to see whether the former president can overcome the charges or whether they will tarnish his reputation and hinder any future political ambitions.</p>
+            <h3>Trump's Legal Troubles: An Overview</h3>
+            <p>Trump is currently involved in a series of legal battles that span multiple states. From allegations of financial fraud to charges related to the January 6th insurrection, Trump’s legal woes are mounting. These trials could have profound implications for his political future and the broader political landscape. Legal experts predict that the upcoming trials will dominate headlines for months to come.</p>
 
-            <h3>The Key Legal Issues</h3>
-            <p>The most pressing case is related to accusations that Trump and his company engaged in fraudulent business practices, inflating the value of assets in order to obtain favorable loans. In another case, Trump faces charges related to his attempts to <strong>influence the outcome of the 2020 election</strong>, including phone calls to Georgia state officials asking them to "find" enough votes to overturn Joe Biden's victory.</p>
-
-            <p>As the dates for these trials approach, the former president's legal team has been actively working on defense strategies, which include challenging the legitimacy of the investigations and seeking to delay the trials as much as possible. However, legal experts say that the clock is ticking, and the former president may soon find himself facing the legal consequences of his actions.</p>
-
-            <!-- Breaking News Section -->
-            <div class="breaking-news">
-                <h3>Breaking News: Trump Announces 2024 Presidential Run Amid Legal Battles</h3>
-                <p>In a dramatic twist, Donald Trump has officially announced that he will run for president again in 2024, despite the ongoing legal challenges. Speaking to a packed crowd at a rally in South Carolina, Trump declared, "The American people deserve leadership that will bring the country back to greatness, and I’m ready to deliver." This announcement has sparked a frenzy in political circles, with many wondering how his legal troubles will affect his campaign.</p>
-
-                <p>Trump’s 2024 run is expected to be one of the most contentious in modern history, as his legal woes intertwine with his political aspirations. The announcement has reignited debates over whether a candidate facing multiple criminal charges should be allowed to run for the highest office in the land. While many of his supporters remain fiercely loyal, critics argue that Trump’s legal issues could disqualify him from running.</p>
-            </div>
-
-            <p>The coming months are set to be a dramatic time for American politics as Trump’s legal battles continue to unfold in the courts while he pushes forward with his 2024 presidential campaign. Whether or not he can successfully balance the two remains to be seen, but one thing is certain: the news surrounding Donald Trump will continue to dominate headlines in the months ahead.</p>
+            <h3>What This Means for Trump’s 2024 Campaign</h3>
+            <p>As Trump gears up for a possible run in the 2024 presidential election, his legal troubles could impact his campaign. Supporters view the charges as politically motivated, while critics believe they are a necessary step toward accountability. How this unfolds will have a significant impact on his chances of winning back the White House.</p>
 
             <div class="cta">
-                <p>Stay Updated with the Latest News on Donald Trump and the 2024 Election</p>
+                <p>Stay Updated on the Legal Saga</p>
             </div>
         </article>
     </div>
@@ -296,3 +282,4 @@
 </div>
 </body>
 </html>
+

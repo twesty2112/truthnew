@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stocks - Truth Newspaper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.8; padding: 0 20px; }
+        header { background-color: #d40000; color: white; padding: 30px 0; text-align: center; margin-bottom: 30px; }
+        h1 { font-family: 'Georgia', serif; font-size: 4em; color: white; margin-bottom: 0; }
+        .nav-bar { display: flex; justify-content: center; background-color: #222; padding: 15px 0; }
+        .nav-bar a { color: white; text-decoration: none; padding: 15px 30px; margin: 0 20px; font-size: 1.2em; text-transform: uppercase; }
+        .nav-bar a:hover { background-color: #444; }
+
+        /* Hamburger Icon */
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger div { width: 30px; height: 3px; background-color: white; }
+
+        /* Hamburger menu dropdown */
+        .nav-bar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-bar ul li {
+            margin-right: 20px;
+        }
+        .nav-bar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        /* Show navigation links when hamburger is clicked */
+        .nav-bar.show { display: block; }
+        .nav-bar ul {
+            flex-direction: column;
+            display: none;
+        }
+        .nav-bar.show ul { display: block; }
+
+        @media (max-width: 768px) {
+            .nav-bar { display: none; flex-direction: column; }
+            .hamburger { display: flex; }
+        }
+
+        /* Breaking News Section */
+        .breaking-news {
+            background-color: #f8f8f8;
+            border-left: 5px solid #d40000;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .breaking-news h3 {
+            font-family: 'Georgia', serif;
+            font-size: 1.8em;
+            color: #d40000;
+            margin-bottom: 10px;
+        }
+
+        .breaking-news p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Truth Newspaper</h1>
+    </header>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar" id="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="news.html">News</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const navBar = document.getElementById('nav-bar');
+            navBar.classList.toggle('show');
+        }
+    </script>
+
+    <!-- Stocks Section -->
+    <div class="container">
+        <h2>Stocks Section</h2>
+        <p>Latest insights into stock market trends and investment opportunities.</p>
+
+        <!-- Breaking News Articles -->
+        <div class="breaking-news">
+            <h3>Breaking News: Tesla Stock Surges After New Quarterly Report</h3>
+            <p>Tesla's stock price soared 10% following the release of its most recent quarterly earnings report, beating analysts' expectations. The electric vehicle giant has seen consistent growth in its production and sales, leading investors to predict a strong future for the company. Analysts are now raising their price targets, further fueling excitement around Tesla's stock.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Apple’s New iPhone Launch Boosts Stock Value</h3>
+            <p>Apple Inc.'s latest iPhone launch has sent the company’s stock value to new heights, as investors remain bullish about the brand's continuous dominance in the smartphone market. The latest iPhone features cutting-edge technology and improved capabilities, attracting strong consumer demand worldwide. Experts believe this release will further cement Apple's position in the tech industry.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Amazon Hits Record High Amid Expansion in Cloud Services</h3>
+            <p>Amazon's stock reached an all-time high today as the company continues to dominate the cloud computing space. With AWS (Amazon Web Services) leading the industry in revenue and growth, Amazon’s stock is showing no signs of slowing down. Investors are optimistic that the expansion of AWS will continue to fuel the company's success in the coming years.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Microsoft Announces Strategic Acquisition of AI Startup</h3>
+            <p>Microsoft has announced its acquisition of a promising artificial intelligence startup, signaling a further expansion of its AI capabilities. The acquisition is expected to bolster Microsoft’s cloud computing and enterprise software offerings, making the company even more competitive in the rapidly-growing AI space. Following the news, Microsoft's stock rose by 6% in after-hours trading.</p>
+        </div>
+
+        <div class="breaking-news">
+            <h3>Breaking News: Nvidia Stock Skyrockets on Strong Demand for Graphics Cards</h3>
+            <p>Nvidia’s stock has surged after the company reported a massive increase in demand for its graphics cards, driven by the booming gaming industry and the rise of AI applications. Nvidia's position as a leader in graphics processing units (GPUs) makes it a key player in the tech industry, and investors are betting on the company’s continued dominance in this space.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Truth Newspaper. All rights reserved.</p>
+    </footer>
+</body>
+</html>

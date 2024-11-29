@@ -9,39 +9,22 @@
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.8; padding: 0 20px; }
-        header { background-color: #d40000; color: white; padding: 30px 0; text-align: center; margin-bottom: 30px; }
-        h1 { font-family: 'Georgia', serif; font-size: 4em; color: white; margin-bottom: 0; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.8; display: flex; flex-direction: column; }
 
-        /* Navigation Bar Styling */
-        .nav-bar {
-            background-color: #222;
-            padding: 15px 0;
-            display: none; /* Hide navigation initially */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
+        header { 
+            background-color: #d40000; 
+            color: white; 
+            padding: 30px 0; 
+            text-align: center; 
+            margin-bottom: 30px; 
         }
-        .nav-bar ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
+
+        h1 { 
+            font-family: 'Georgia', serif; 
+            font-size: 4em; 
+            color: white; 
+            margin-bottom: 0; 
         }
-        .nav-bar ul li {
-            margin-right: 20px;
-        }
-        .nav-bar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            padding: 10px 20px;
-        }
-        .nav-bar ul li a:hover { background-color: #444; }
 
         /* Hamburger Icon */
         .hamburger { 
@@ -49,7 +32,10 @@
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
         }
         .hamburger div { 
             width: 30px; 
@@ -57,27 +43,43 @@
             background-color: white;
         }
 
-        /* Show navigation when hamburger menu is clicked */
-        .nav-bar.show {
-            display: block;
+        /* Sidebar Navigation Styling */
+        .sidebar {
+            width: 250px; 
+            background-color: #222;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: -250px;
+            top: 0;
+            height: 100%;
+            transition: 0.3s;
+            z-index: 9;
+        }
+        .sidebar a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 15px 0; 
+            margin: 10px 0;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+        .sidebar a:hover { background-color: #444; }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 20px;
+            width: 100%;
+            transition: margin-left 0.3s;
         }
 
-        @media (max-width: 768px) {
-            .nav-bar ul {
-                flex-direction: column;
-                text-align: center;
-                width: 100%;
-            }
-
-            .hamburger {
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-            }
-
-            .nav-bar ul li {
-                margin: 10px 0;
-            }
+        /* When sidebar is open, move content to the right */
+        .sidebar.open {
+            left: 0;
+        }
+        .main-content.sidebar-open {
+            margin-left: 250px;
         }
 
         /* Breaking News Section */
@@ -118,31 +120,22 @@
     </header>
 
     <!-- Hamburger Icon -->
-    <div class="hamburger" onclick="toggleNav()">
+    <div class="hamburger" onclick="toggleSidebar()">
         <div></div>
         <div></div>
         <div></div>
     </div>
 
-    <!-- Navigation Bar -->
-    <div class="nav-bar" id="nav-bar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="stocks.html">Stocks</a></li>
-            <li><a href="technology.html">Technology</a></li>
-            <li><a href="news.html">News</a></li>
-        </ul>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="stocks.html">Stocks</a>
+        <a href="technology.html">Technology</a>
+        <a href="news.html">News</a>
     </div>
 
-    <script>
-        function toggleNav() {
-            const navBar = document.getElementById('nav-bar');
-            navBar.classList.toggle('show');
-        }
-    </script>
-
-    <!-- Technology Section -->
-    <div class="container">
+    <!-- Main Content Area -->
+    <div class="main-content" id="main-content">
         <h2>Technology Section</h2>
         <p>Latest advancements in technology, from AI to innovation in digital industries.</p>
 
@@ -177,5 +170,14 @@
     <footer>
         <p>&copy; 2024 Truth Newspaper. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('main-content');
+            sidebar.classList.toggle('open');
+            mainContent.classList.toggle('sidebar-open');
+        }
+    </script>
 </body>
 </html>

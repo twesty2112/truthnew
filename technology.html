@@ -15,29 +15,19 @@
 
         /* Navigation Bar Styling */
         .nav-bar {
-            display: flex;
-            justify-content: center;
             background-color: #222;
             padding: 15px 0;
+            display: none; /* Hide navigation initially */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
         }
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            margin: 0 20px;
-            font-size: 1.2em;
-            text-transform: uppercase;
-        }
-        .nav-bar a:hover { background-color: #444; }
-
-        /* Hamburger Icon */
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-        .hamburger div { width: 30px; height: 3px; background-color: white; }
-
-        /* Hamburger menu dropdown */
         .nav-bar ul {
-            display: flex;
             list-style: none;
+            display: flex;
+            justify-content: center;
             margin: 0;
             padding: 0;
         }
@@ -45,23 +35,49 @@
             margin-right: 20px;
         }
         .nav-bar ul li a {
-            text-decoration: none;
             color: white;
+            text-decoration: none;
             font-size: 1.2em;
             text-transform: uppercase;
+            padding: 10px 20px;
+        }
+        .nav-bar ul li a:hover { background-color: #444; }
+
+        /* Hamburger Icon */
+        .hamburger { 
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .hamburger div { 
+            width: 30px; 
+            height: 3px; 
+            background-color: white;
         }
 
-        /* Show navigation links when hamburger is clicked */
-        .nav-bar.show { display: block; }
-        .nav-bar ul {
-            flex-direction: column;
-            display: none;
+        /* Show navigation when hamburger menu is clicked */
+        .nav-bar.show {
+            display: block;
         }
-        .nav-bar.show ul { display: block; }
 
         @media (max-width: 768px) {
-            .nav-bar { display: none; flex-direction: column; }
-            .hamburger { display: flex; }
+            .nav-bar ul {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+            }
+
+            .hamburger {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .nav-bar ul li {
+                margin: 10px 0;
+            }
         }
 
         /* Breaking News Section */

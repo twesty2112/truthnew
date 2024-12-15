@@ -21,124 +21,6 @@ header {
     text-align: center;
     border-bottom: 5px solid #222;
     margin-bottom: 30px;
-}
-
-h1 {
-    font-family: 'Georgia', serif;
-    font-size: 4em;
-    color: #add8e6; /* Baby blue color for the title */
-    margin-bottom: 0;
-}
-
-/* Navigation Bar */
-.nav-bar {
-    display: flex;
-    justify-content: center;
-    background-color: #222;
-    padding: 15px 0;
-    margin-bottom: 40px;
-    align-items: center; /* Align items horizontally */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.nav-bar a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    margin: 0 20px;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.nav-bar a:hover {
-    background-color: #444;
-}
-
-/* Content Section */
-.container {
-    display: grid;
-    grid-template-columns: 1fr; /* One column layout for mobile first */
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-article {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2.2em;
-    color: #333;
-    padding: 20px;
-}
-
-p {
-    font-size: 1em;
-    color: #555;
-    padding: 0 20px 20px;
-    line-height: 1.7;
-}
-
-.highlight {
-    color: #333333; /* Dark grey for highlighted text */
-    font-weight: bold;
-}
-
-.cta {
-    background-color: #333333; /* Dark grey background */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: auto;
-}
-
-.cta:hover {
-    background-color: #222222; /* Slightly darker grey for hover effect */
-}
-
-/* Breaking News Section */
-.breaking-news {
-    background-color: #f8f8f8;
-    border-left: 5px solid #333333; /* Dark grey border */
-    margin: 20px 0;
-    padding: 15px;
-}
-
-/* Footer Styling */
-/* General Reset and Font Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.8;
-    padding: 0 20px;
-}
-
-/* Header Styling */
-header {
-    background-color: #333333; /* Dark grey background */
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    border-bottom: 5px solid #222;
-    margin-bottom: 30px;
     width: 100%; /* Ensure header stretches across the full width */
 }
 
@@ -257,7 +139,7 @@ p {
 
 /* Media Queries for Mobile Responsiveness */
 
-/* Mobile */
+/* Tablet and Small Screens */
 @media (max-width: 768px) {
     header {
         padding: 20px 0;
@@ -284,6 +166,10 @@ p {
         grid-template-columns: 1fr; /* Keep single column layout for mobile */
     }
 
+    article {
+        margin: 0 10px; /* Add margin for small screen */
+    }
+
     h2 {
         font-size: 1.8em; /* Adjust heading size for smaller screens */
     }
@@ -308,7 +194,7 @@ p {
     }
 }
 
-/* Smaller Devices */
+/* Smaller Devices (Phones) */
 @media (max-width: 480px) {
     h1 {
         font-size: 2em; /* Further reduce the font size of the title */
@@ -319,11 +205,28 @@ p {
         font-size: 0.9em; /* Smaller font size */
     }
 
+    .container {
+        padding: 0 10px; /* Reduce container padding for small screens */
+    }
+
     h2 {
         font-size: 1.5em; /* Further reduce heading size */
     }
 
+    p {
+        font-size: 0.85em; /* Further reduce paragraph size */
+    }
+
     .cta {
         font-size: 0.9em; /* Reduce the font size of the CTA button */
+        padding: 12px;
+    }
+
+    .footer {
+        padding: 15px 10px; /* Adjust footer padding */
+    }
+
+    .footer-links a {
+        font-size: 0.8em; /* Smaller links on very small screens */
     }
 }

@@ -38,6 +38,7 @@ h1 {
     padding: 15px 0;
     margin-bottom: 40px;
     align-items: center; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .nav-bar a {
@@ -131,4 +132,74 @@ p {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 2.5em; /* Reduce title font size for smaller screens */
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Stack the navigation links vertically on small screens */
+        padding: 10px 0;
+    }
+
+    .nav-bar a {
+        padding: 10px 20px; /* Adjust padding for smaller screen navigation */
+        margin: 5px 0;
+        font-size: 1em; /* Adjust font size for better readability */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Keep single column layout for mobile */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 0.9em; /* Slightly reduce paragraph size */
+        padding: 0 10px 15px;
+    }
+
+    .cta {
+        font-size: 1em; /* Adjust call-to-action font size */
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 20px 15px;
+    }
+
+    .footer-links a {
+        font-size: 0.9em; /* Smaller links on mobile */
+    }
+}
+
+/* Smaller Devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Further reduce the font size of the title */
+    }
+
+    .nav-bar a {
+        padding: 8px 15px; /* Smaller padding for very small devices */
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Further reduce heading size */
+    }
+
+    .cta {
+        font-size: 0.9em; /* Reduce the font size of the CTA button */
+    }
 }

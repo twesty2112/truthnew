@@ -23,6 +23,60 @@
 
     <!-- Link to External CSS File -->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Default styles for full-width header and sections */
+        header h1 {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        /* Media query for small screens (iPhone and similar) */
+        @media (max-width: 600px) {
+            header h1, .nav-bar {
+                width: 100%;
+            }
+
+            .nav-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-bar a {
+                padding: 12px;
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            /* Ensure the articles sections also take the full width */
+            .container {
+                width: 100%;
+                padding: 0;
+            }
+
+            .container > div {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- Truth Newspaper Header -->
@@ -47,7 +101,7 @@
             <div style="text-align: center;">
                 <!-- Image inserted from New Flickr BB Code -->
                 <a href="https://flic.kr/p/R5Nd4U">
-                    <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland" style="width: 600px; height: 250px; object-fit: cover; object-position: top; border-bottom: 3px solid #ddd;">
+                    <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland" style="width: 100%; max-width: 600px; height: auto;">
                 </a>
                 <p><a href="https://flic.kr/p/R5Nd4U">Palantir pavilion, World Economic Forum, Davos, Switzerland</a> by <a href="https://www.flickr.com/photos/doctorow/">Cory Doctorow</a>, on Flickr</p>
             </div>
@@ -115,15 +169,15 @@
                     <a href="https://flic.kr/p/2oRoCMD">Donald Trump</a> by 
                     <a href="https://www.flickr.com/photos/gageskidmore/">Gage Skidmore</a>, on <a href="https://www.flickr.com/">Flickr</a>
                 </p>
-            </div>
-            <h3>Trump's Legal Troubles: An Overview</h3>
-            <p>Trump is currently involved in a series of legal battles that span multiple states. From allegations of financial fraud to charges related to the January 6th insurrection, Trump’s legal woes are mounting. These trials could have profound implications for his political future and the broader political landscape. Legal experts predict that the upcoming trials will dominate headlines for months to come.</p>
+            </div>      
+            <h3>Trump Faces Multiple Legal Trials</h3>
+            <p>As trial dates draw closer, Trump's legal team is working to prepare for the complex cases that lie ahead. In addition to the criminal charges, Trump is facing civil suits related to his business dealings and the January 6th Capitol riot. While some legal experts believe Trump could be exonerated in some of these cases, others argue that the legal battles will continue to create a cloud of uncertainty for the former president and his supporters.</p>
 
-            <h3>What This Means for Trump’s 2024 Campaign</h3>
-            <p>As Trump gears up for a possible run in the 2024 presidential election, his legal troubles could impact his campaign. Supporters view the charges as politically motivated, while critics believe they are a necessary step toward accountability. How this unfolds will have a significant impact on his chances of winning back the White House.</p>
+            <h3>Political Ramifications of the Trials</h3>
+            <p>The ongoing trials have significant political implications. Many believe that the outcome of these cases will shape the trajectory of Trump's political future. Should he face conviction in any of these cases, it could severely hinder his ability to mount a successful presidential campaign in the future.</p>
 
             <div class="cta">
-                <p>Stay Updated on the Legal Saga</p>
+                <p>Stay Updated on This Story</p>
             </div>
         </article>
     </div>

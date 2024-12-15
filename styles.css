@@ -1,4 +1,4 @@
-/* General Reset and Font Styles */
+//* General Reset and Font Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.8;
-    padding: 0 20px; /* Adjust padding for mobile */
-    margin: 0;
+    padding: 0 20px;
 }
 
 /* Header Styling */
@@ -64,6 +63,10 @@ h1 {
     grid-template-columns: 1fr; /* One column layout for mobile first */
     gap: 30px;
     margin-bottom: 40px;
+    width: 100%; /* Allow container to use full width */
+    max-width: 1200px; /* Align the container width with the header/footer */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Ensure consistent padding inside the container */
 }
 
 article {
@@ -74,7 +77,6 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0 10px; /* Remove unwanted margins */
 }
 
 h2 {
@@ -127,6 +129,8 @@ p {
     padding: 30px 20px;
     margin-top: 50px;
     width: 100%; /* Ensure footer stretches across the full width */
+    max-width: 1200px; /* Align footer with container */
+    margin: 0 auto; /* Center the footer */
 }
 
 .footer-links a {
@@ -141,36 +145,43 @@ p {
 
 /* Media Queries for Mobile Responsiveness */
 
-/* Tablet and Small Screens */
+/* Mobile (Tablets and Small Screens) */
 @media (max-width: 768px) {
+    body {
+        padding: 0 15px; /* Reduce padding for body */
+    }
+
     header {
         padding: 20px 0;
         width: 100%; /* Ensure header stretches across full width */
     }
 
     h1 {
-        font-size: 2.5em; /* Reduce title font size for smaller screens */
+        font-size: 2.5em; /* Adjust title font size for mobile */
     }
 
     .nav-bar {
-        flex-direction: column; /* Stack the navigation links vertically on small screens */
+        flex-direction: column; /* Stack the navigation links vertically */
         padding: 10px 0;
         width: 100%; /* Ensure nav bar stretches across full width */
     }
 
     .nav-bar a {
-        padding: 10px 20px; /* Adjust padding for smaller screen navigation */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
         margin: 5px 0;
         font-size: 1em; /* Adjust font size for better readability */
     }
 
     .container {
-        grid-template-columns: 1fr; /* Keep single column layout for mobile */
-        padding: 0 20px; /* Keep padding consistent with body */
+        grid-template-columns: 1fr; /* Keep a single column layout for mobile */
+        width: 100%; /* Allow container to use full width */
+        max-width: 1200px; /* Align the container width with the header/footer */
+        margin: 0 auto; /* Center the container */
+        padding: 0 15px; /* Ensure consistent padding inside the container */
     }
 
     article {
-        margin: 0 10px; /* Ensure margin is consistent on mobile */
+        margin: 0 10px; /* Ensure consistent margin around articles */
     }
 
     h2 {
@@ -190,6 +201,8 @@ p {
     .footer {
         padding: 20px 15px;
         width: 100%; /* Ensure footer stretches across full width */
+        max-width: 1200px; /* Align the footer width with the content */
+        margin: 0 auto; /* Center the footer */
     }
 
     .footer-links a {
@@ -199,6 +212,10 @@ p {
 
 /* Smaller Devices (Phones) */
 @media (max-width: 480px) {
+    body {
+        padding: 0 10px; /* Further reduce body padding for smaller screens */
+    }
+
     h1 {
         font-size: 2em; /* Further reduce the font size of the title */
     }
@@ -210,6 +227,7 @@ p {
 
     .container {
         padding: 0 10px; /* Reduce container padding for small screens */
+        max-width: 1000px; /* Set a maximum width for smaller devices */
     }
 
     h2 {
@@ -227,9 +245,12 @@ p {
 
     .footer {
         padding: 15px 10px; /* Adjust footer padding */
+        max-width: 1000px; /* Align footer with container */
+        margin: 0 auto; /* Center the footer */
     }
 
     .footer-links a {
         font-size: 0.8em; /* Smaller links on very small screens */
     }
 }
+

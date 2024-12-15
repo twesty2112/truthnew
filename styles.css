@@ -252,5 +252,10 @@ p {
     .footer-links a {
         font-size: 0.8em; /* Smaller links on very small screens */
     }
+ /* Adjust Image Width on Small Phones */
+    img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
 

@@ -10,7 +10,8 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.8;
-    padding: 0 20px;
+    padding: 0 20px; /* Adjust padding for mobile */
+    margin: 0;
 }
 
 /* Header Styling */
@@ -73,6 +74,7 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 0 10px; /* Remove unwanted margins */
 }
 
 h2 {
@@ -164,10 +166,11 @@ p {
 
     .container {
         grid-template-columns: 1fr; /* Keep single column layout for mobile */
+        padding: 0 20px; /* Keep padding consistent with body */
     }
 
     article {
-        margin: 0 10px; /* Add margin for small screen */
+        margin: 0 10px; /* Ensure margin is consistent on mobile */
     }
 
     h2 {

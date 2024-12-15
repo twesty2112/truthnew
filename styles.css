@@ -116,12 +116,133 @@ p {
 }
 
 /* Footer Styling */
+/* General Reset and Font Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #333333; /* Dark grey background */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 5px solid #222;
+    margin-bottom: 30px;
+    width: 100%; /* Ensure header stretches across the full width */
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 4em;
+    color: #add8e6; /* Baby blue color for the title */
+    margin-bottom: 0;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    align-items: center; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    width: 100%; /* Ensure nav bar stretches across full width */
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 0 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-bar a:hover {
+    background-color: #444;
+}
+
+/* Content Section */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* One column layout for mobile first */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2em;
+    color: #333;
+    padding: 20px;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+    padding: 0 20px 20px;
+    line-height: 1.7;
+}
+
+.highlight {
+    color: #333333; /* Dark grey for highlighted text */
+    font-weight: bold;
+}
+
+.cta {
+    background-color: #333333; /* Dark grey background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.cta:hover {
+    background-color: #222222; /* Slightly darker grey for hover effect */
+}
+
+/* Breaking News Section */
+.breaking-news {
+    background-color: #f8f8f8;
+    border-left: 5px solid #333333; /* Dark grey border */
+    margin: 20px 0;
+    padding: 15px;
+}
+
+/* Footer Styling */
 .footer {
     background-color: #333333; /* Dark grey background for footer */
     color: white;
     text-align: center;
     padding: 30px 20px;
     margin-top: 50px;
+    width: 100%; /* Ensure footer stretches across the full width */
 }
 
 .footer-links a {
@@ -140,6 +261,7 @@ p {
 @media (max-width: 768px) {
     header {
         padding: 20px 0;
+        width: 100%; /* Ensure header stretches across full width */
     }
 
     h1 {
@@ -149,6 +271,7 @@ p {
     .nav-bar {
         flex-direction: column; /* Stack the navigation links vertically on small screens */
         padding: 10px 0;
+        width: 100%; /* Ensure nav bar stretches across full width */
     }
 
     .nav-bar a {
@@ -177,6 +300,7 @@ p {
 
     .footer {
         padding: 20px 15px;
+        width: 100%; /* Ensure footer stretches across full width */
     }
 
     .footer-links a {

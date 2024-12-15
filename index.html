@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Truth Newspaper delivers breaking news, the latest in technology, and investment insights. Stay informed about the stock market, AI, and major news stories.">
     <meta name="keywords" content="news, technology, stocks, investment, AI, Palantir, breaking news, business, politics">
     <meta name="robots" content="index, follow">
@@ -21,211 +21,8 @@
     <!-- Importing Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-    <style>
-        /* General Reset and Font Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.8;
-            padding: 0 20px;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #d40000; /* Washington Post red */
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            border-bottom: 5px solid #222;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-family: 'Georgia', serif;
-            font-size: 4em;
-            color: white;
-            margin-bottom: 0;
-        }
-
-        /* Navigation Bar */
-        .nav-bar {
-            display: flex;
-            justify-content: center;
-            background-color: #222;
-            padding: 15px 0;
-            margin-bottom: 40px;
-            align-items: center; /* Align items horizontally */
-        }
-
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            margin: 0 20px;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .nav-bar a:hover {
-            background-color: #444;
-        }
-
-        /* Content Section */
-        .container {
-            display: grid;
-            grid-template-columns: 1fr; /* One column layout for mobile first */
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        article {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        h2 {
-            font-family: 'Georgia', serif;
-            font-size: 2.2em;
-            color: #333;
-            padding: 20px;
-        }
-
-        p {
-            font-size: 1em;
-            color: #555;
-            padding: 0 20px 20px;
-            line-height: 1.7;
-        }
-
-        .highlight {
-            color: #d40000;
-            font-weight: bold;
-        }
-
-        .cta {
-            background-color: #d40000;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: auto;
-        }
-
-        .cta:hover {
-            background-color: #bb0000;
-        }
-
-        /* Breaking News Section */
-        .breaking-news {
-            background-color: #f8f8f8;
-            border-left: 5px solid #d40000;
-            margin: 20px 0;
-            padding: 20px;
-        }
-
-        .breaking-news h3 {
-            font-family: 'Georgia', serif;
-            font-size: 1.8em;
-            color: #d40000;
-            margin-bottom: 10px;
-        }
-
-        .breaking-news p {
-            font-size: 1.1em;
-            color: #333;
-        }
-
-        /* Footer Styling */
-        .footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .footer-links a {
-            color: #777;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        .footer-links a:hover {
-            color: #d40000;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .container {
-                grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
-            }
-
-            .other-articles {
-                grid-template-columns: 1fr; /* One column for smaller screens */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr; /* One column layout for mobile */
-            }
-
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .nav-bar {
-                flex-direction: column;
-            }
-
-            /* Adjusting images for mobile */
-            .container img {
-                width: 100%;
-                height: auto;
-                max-width: 100%; /* Ensure images scale within their container */
-            }
-
-            /* Reduce spacing for smaller screens */
-            .cta {
-                font-size: 1em;
-                padding: 10px;
-            }
-
-            .breaking-news h3 {
-                font-size: 1.5em;
-            }
-
-            .footer-links a {
-                font-size: 0.8em;
-            }
-
-            /* Adjust font size of article headers for better readability */
-            h2 {
-                font-size: 1.8em;
-            }
-
-            /* Adjust padding for articles */
-            p {
-                padding: 0 10px 20px;
-            }
-        }
-    </style>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!-- Truth Newspaper Header -->
@@ -247,13 +44,13 @@
         <article>
             <h2>Why Palantir is Going to Make You a Millionaire</h2>
             <p>When it comes to finding the next big opportunity in tech, <strong>Palantir Technologies (PLTR)</strong> is a name that should be at the top of your list. This revolutionary company is making waves in the world of data analytics, and if you’re looking for a stock that could significantly boost your wealth, Palantir might just be your ticket to financial success.</p>
-<div style="text-align: center;">
-    <!-- Image inserted from New Flickr BB Code -->
-    <a href="https://flic.kr/p/R5Nd4U">
-        <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland" style="width: 600px; height: 250px; object-fit: cover; object-position: top; border-bottom: 3px solid #ddd;">
-    </a>
-    <p><a href="https://flic.kr/p/R5Nd4U">Palantir pavilion, World Economic Forum, Davos, Switzerland</a> by <a href="https://www.flickr.com/photos/doctorow/">Cory Doctorow</a>, on Flickr</p>
-</div>            <h3>1. Palantir’s Dominance in Big Data Analytics</h3>
+            <div style="text-align: center;">
+                <a href="https://flic.kr/p/R5Nd4U">
+                    <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland" style="width: 600px; height: 250px; object-fit: cover; object-position: top; border-bottom: 3px solid #ddd;">
+                </a>
+                <p><a href="https://flic.kr/p/R5Nd4U">Palantir pavilion, World Economic Forum, Davos, Switzerland</a> by <a href="https://www.flickr.com/photos/doctorow/">Cory Doctorow</a>, on Flickr</p>
+            </div>
+            <h3>1. Palantir’s Dominance in Big Data Analytics</h3>
             <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data. They have been instrumental in helping organizations across sectors from healthcare to finance make data-driven decisions. In fact, Palantir has been involved in numerous high-profile projects, including helping the U.S. government fight terrorism by analyzing intelligence data.</p>
 
             <h3>2. Long-Term, Lucrative Contracts</h3>
@@ -262,7 +59,6 @@
             <h3>3. Expanding in Commercial Markets</h3>
             <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. This shift means that Palantir is not just dependent on government contracts anymore. The company is helping a growing number of businesses make sense of their own data, whether it’s analyzing customer behavior, improving supply chains, or driving efficiency in operations. As Palantir diversifies its client base, it opens the door for significant growth in the future.</p>
 
-            <!-- Breaking Exciting News Section -->
             <div class="breaking-news">
                 <h3>Breaking Exciting News: Palantir's New Partnership with Tesla</h3>
                 <p>In an unexpected move, <strong>Palantir Technologies</strong> has announced a groundbreaking partnership with <strong>Tesla Inc.</strong> to integrate its data analytics software into Tesla's self-driving car systems. The deal is set to revolutionize how autonomous vehicles process and learn from real-time data, ultimately making Tesla's self-driving technology more efficient and safer on the road. This partnership has the potential to increase Palantir's stock value in the coming months.</p>
@@ -279,16 +75,12 @@
         <article>
             <h2>The Rise of AI: A Glimpse into the Future</h2>
             <p>Artificial Intelligence (AI) has become one of the most transformative technologies of the 21st century. From enhancing business operations to revolutionizing healthcare and education, AI is poised to reshape the world as we know it. As companies continue to invest heavily in AI, it is clear that this technology will play a significant role in our future.</p>
-<div style="text-align: center;">
-    <!-- Image inserted from New Flickr BB Code -->
-        <a href="https://flic.kr/p/N2LvdL">
-            <img src="https://live.staticflickr.com/1816/30212411048_2a1d7200e2.jpg" alt="Artificial Intelligence & AI & Machine Learning">
-        </a>
-        <p>
-            <a href="https://flic.kr/p/N2LvdL">Artificial Intelligence & AI & Machine Learning</a> by
-            <a href="https://www.flickr.com/photos/mikemacmarketing/">Mike MacKenzie</a>, on <a href="https://www.flickr.com/">Flickr </a>, on Flickr</p>
-</div>      
-        </p> 
+            <div style="text-align: center;">
+                <a href="https://flic.kr/p/N2LvdL">
+                    <img src="https://live.staticflickr.com/1816/30212411048_2a1d7200e2.jpg" alt="Artificial Intelligence & AI & Machine Learning">
+                </a>
+                <p><a href="https://flic.kr/p/N2LvdL">Artificial Intelligence & AI & Machine Learning</a> by <a href="https://www.flickr.com/photos/mikemacmarketing/">Mike MacKenzie</a>, on Flickr</p>
+            </div>
             <h3>AI's Role in Healthcare Innovation</h3>
             <p>In healthcare, AI-powered systems are being used to diagnose diseases, predict patient outcomes, and develop personalized treatment plans. One of the most promising advancements is in the field of <strong>AI-driven diagnostics</strong>. By analyzing vast amounts of medical data, AI can help doctors identify diseases such as cancer in their earliest stages, leading to better patient outcomes and saving lives.</p>
 
@@ -308,40 +100,30 @@
     <div id="news">
         <article>
             <h2>Breaking News: Donald Trump to Face New Legal Challenges as Trial Dates Approach</h2>
-            <p>In an unexpected turn of events, former President <strong>Donald Trump</strong> is once again making headlines as he faces a new set of legal challenges. With trial dates approaching for multiple cases, the political landscape in the United States is bracing for what could be a pivotal moment in American history.</p> 
-<div style="text-align: center;">
-    <!-- Image from Flickr with Creative Commons License -->
-    <a href="https://flic.kr/p/2oRoCMD">
-        <img src="https://live.staticflickr.com/65535/53067465959_cdb840dab5.jpg" alt="Donald Trump" style="width: 100%; max-width: 600px; height: auto; border: 2px solid #ddd;">
-    </a>
-    <p>
-        <a href="https://flic.kr/p/2oRoCMD">Donald Trump</a> by 
-        <a href="https://www.flickr.com/photos/gageskidmore/">Gage Skidmore</a>, on <a href="https://www.flickr.com/">Flickr</a>
-    </p>
-</div>
-            <h3>Trump's Legal Troubles: An Overview</h3>
-            <p>Trump is currently involved in a series of legal battles that span multiple states. From allegations of financial fraud to charges related to the January 6th insurrection, Trump’s legal woes are mounting. These trials could have profound implications for his political future and the broader political landscape. Legal experts predict that the upcoming trials will dominate headlines for months to come.</p>
-
-            <h3>What This Means for Trump’s 2024 Campaign</h3>
-            <p>As Trump gears up for a possible run in the 2024 presidential election, his legal troubles could impact his campaign. Supporters view the charges as politically motivated, while critics believe they are a necessary step toward accountability. How this unfolds will have a significant impact on his chances of winning back the White House.</p>
+            <p>In an unexpected turn of events, former President <strong>Donald Trump</strong> is once again making headlines as he faces a new set of legal challenges. With trial dates approaching for multiple cases, the political landscape in the United States is bracing for what could be a pivotal moment in American history.</p>
+            <div style="text-align: center;">
+                <a href="https://flic.kr/p/2oRoCMD">
+                    <img src="https://live.staticflickr.com/65535/53067465959_cdb840dab5.jpg" alt="Donald Trump" style="width: 100%; max-width: 600px; height: auto; border: 2px solid #ddd;">
+                </a>
+                <p><a href="https://flic.kr/p/2oRoCMD">Donald Trump</a> by <a href="https://www.flickr.com/photos/gageskidmore/">Gage Skidmore</a>, on Flickr</p>
+            </div>
+            <p>As the <strong>legal trials</strong> unfold, Trump's political future remains uncertain. Stay tuned for updates as the cases progress and the impact on his standing in the political world.</p>
 
             <div class="cta">
-                <p>Stay Updated on the Legal Saga</p>
+                <p>Stay Updated with Breaking News</p>
             </div>
         </article>
     </div>
 </div>
 
-<!-- Footer with Links -->
-<div class="footer">
+<!-- Footer -->
+<footer class="footer">
     <p>&copy; 2024 Truth Newspaper. All rights reserved.</p>
     <div class="footer-links">
-        <a href="about.html">About</a> | 
-        <a href="terms.html">Terms and Conditions</a> | 
-        <a href="disclaimer.html">Disclaimer</a> | 
-        <a href="privacy-policy.html">Privacy Policy</a> | 
-        <a href="site-map.html">Site Map</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
     </div>
-</div>
+</footer>
 </body>
 </html>

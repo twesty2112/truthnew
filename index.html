@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- SEO Meta Tags -->
+ <!-- SEO Meta Tags -->
     <meta name="description" content="Truth Newspaper delivers breaking news, the latest in technology, and investment insights. Stay informed about the stock market, AI, and major news stories.">
     <meta name="keywords" content="news, technology, stocks, investment, AI, Palantir, breaking news, business, politics">
     <meta name="robots" content="index, follow">
@@ -21,59 +21,208 @@
     <!-- Importing Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Link to External CSS File -->
-    <link rel="stylesheet" href="styles.css">
-
     <style>
-        /* Default styles for full-width header and sections */
-        header h1 {
-            width: 100%;
-            text-align: center;
+        /* General Reset and Font Styles */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.8;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #d40000; /* Washington Post red */
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 5px solid #222;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 4em;
+            color: white;
+            margin-bottom: 0;
+        }
+
+        /* Navigation Bar */
         .nav-bar {
-            width: 100%;
             display: flex;
-            justify-content: space-around;
-            background-color: #333;
-            padding: 10px 0;
+            justify-content: center;
+            background-color: #222;
+            padding: 15px 0;
+            margin-bottom: 40px;
+            align-items: center; /* Align items horizontally */
         }
 
         .nav-bar a {
             color: white;
             text-decoration: none;
-            padding: 10px;
+            padding: 15px 30px;
+            margin: 0 20px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
-        /* Media query for small screens (iPhone and similar) */
-        @media (max-width: 600px) {
-            header h1, .nav-bar {
-                width: 100%;
+        .nav-bar a:hover {
+            background-color: #444;
+        }
+
+        /* Content Section */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr; /* One column layout for mobile first */
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        article {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2.2em;
+            color: #333;
+            padding: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            color: #555;
+            padding: 0 20px 20px;
+            line-height: 1.7;
+        }
+
+        .highlight {
+            color: #d40000;
+            font-weight: bold;
+        }
+
+        .cta {
+            background-color: #d40000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: auto;
+        }
+
+        .cta:hover {
+            background-color: #bb0000;
+        }
+
+        /* Breaking News Section */
+        .breaking-news {
+            background-color: #f8f8f8;
+            border-left: 5px solid #d40000;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .breaking-news h3 {
+            font-family: 'Georgia', serif;
+            font-size: 1.8em;
+            color: #d40000;
+            margin-bottom: 10px;
+        }
+
+        .breaking-news p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-links a {
+            color: #777;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            color: #d40000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+            }
+
+            .other-articles {
+                grid-template-columns: 1fr; /* One column for smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* One column layout for mobile */
+            }
+
+            h1 {
+                font-size: 2.5em;
             }
 
             .nav-bar {
                 flex-direction: column;
-                align-items: center;
             }
 
-            .nav-bar a {
-                padding: 12px;
+            /* Adjusting images for mobile */
+            .container img {
                 width: 100%;
-                text-align: center;
-                box-sizing: border-box;
+                height: auto;
+                max-width: 100%; /* Ensure images scale within their container */
             }
 
-            /* Ensure the articles sections also take the full width */
-            .container {
-                width: 100%;
-                padding: 0;
-            }
-
-            .container > div {
-                width: 100%;
+            /* Reduce spacing for smaller screens */
+            .cta {
+                font-size: 1em;
                 padding: 10px;
-                box-sizing: border-box;
+            }
+
+            .breaking-news h3 {
+                font-size: 1.5em;
+            }
+
+            .footer-links a {
+                font-size: 0.8em;
+            }
+
+            /* Adjust font size of article headers for better readability */
+            h2 {
+                font-size: 1.8em;
+            }
+
+            /* Adjust padding for articles */
+            p {
+                padding: 0 10px 20px;
             }
         }
     </style>
@@ -98,24 +247,20 @@
         <article>
             <h2>Why Palantir is Going to Make You a Millionaire</h2>
             <p>When it comes to finding the next big opportunity in tech, <strong>Palantir Technologies (PLTR)</strong> is a name that should be at the top of your list. This revolutionary company is making waves in the world of data analytics, and if you’re looking for a stock that could significantly boost your wealth, Palantir might just be your ticket to financial success.</p>
-            <div style="text-align: center;">
-                <!-- Image inserted from New Flickr BB Code -->
-                <a href="https://flic.kr/p/R5Nd4U">
-                    <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland" style="width: 100%; max-width: 600px; height: auto;">
-                </a>
-                <p><a href="https://flic.kr/p/R5Nd4U">Palantir pavilion, World Economic Forum, Davos, Switzerland</a> by <a href="https://www.flickr.com/photos/doctorow/">Cory Doctorow</a>, on Flickr</p>
-            </div>
-            <h3>1. Palantir’s Software is Invaluable and Sticky: A Long-Term Solution</h3>
-            <p>Palantir’s software is not just another tech product—it's a mission-critical tool for its clients. Once integrated into an organization, Palantir’s platforms, such as Foundry and Gotham, become deeply embedded in decision-making processes. Companies and governments rely on Palantir for critical data analytics, and this dependency creates a "sticky" product that’s tough to replace. Unlike other software solutions that may be swapped out with a new version or competitor, Palantir’s platform is indispensable to its users, ensuring long-term customer retention and recurring revenue. This stickiness not only ensures steady growth but also offers investors a sense of stability and security in the company's business model.</p>
+<div style="text-align: center;">
+    <!-- Image inserted from New Flickr BB Code -->
+    <a href="https://flic.kr/p/R5Nd4U">
+        <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland" style="width: 600px; height: 250px; object-fit: cover; object-position: top; border-bottom: 3px solid #ddd;">
+    </a>
+    <p><a href="https://flic.kr/p/R5Nd4U">Palantir pavilion, World Economic Forum, Davos, Switzerland</a> by <a href="https://www.flickr.com/photos/doctorow/">Cory Doctorow</a>, on Flickr</p>
+</div>            <h3>1. Palantir’s Dominance in Big Data Analytics</h3>
+            <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data. They have been instrumental in helping organizations across sectors from healthcare to finance make data-driven decisions. In fact, Palantir has been involved in numerous high-profile projects, including helping the U.S. government fight terrorism by analyzing intelligence data.</p>
 
-            <h3>2. Founders’ Success and Personal Status Drive Palantir’s Reputation</h3>
-            <p>Palantir’s founders, including Peter Thiel, have become icons in the tech world, adding immense credibility and status to the company. Thiel’s track record, from co-founding PayPal to his early investment in Facebook, showcases a history of identifying game-changing opportunities. This personal success and the reputation of Palantir’s leadership team attract top-tier talent and exclusive, high-profile contracts with governments and multinational corporations. Their reputation for success also enhances the company's prestige and brand, making it even more attractive to potential investors who value the leadership’s ability to execute on long-term visions.</p>
+            <h3>2. Long-Term, Lucrative Contracts</h3>
+            <p>One of the most compelling reasons to invest in Palantir is its <strong>unique business model</strong>. Unlike most tech companies that rely on short-term sales, Palantir has a reputation for securing <strong>long-term, high-value contracts</strong>. With long-term government contracts and partnerships with major corporations, Palantir's business model is built for sustainable growth. Their contracts are often multi-year, which gives them a reliable revenue stream that many tech companies don’t have.</p>
 
-            <h3>3. No Real Competition in the Generative AI Space</h3>
-            <p>While many tech companies are diving into the generative AI space, Palantir stands out by offering highly specialized solutions that integrate generative AI with big data analytics. Unlike most competitors who are focused on creating general-purpose AI tools, Palantir’s expertise lies in applying these technologies to real-world problems at scale. Their AI-driven analytics platforms are used by the government and major corporations for sensitive operations like national security and financial analysis, where there’s a need for extremely precise, reliable, and ethical AI solutions. This puts Palantir in a unique position with little to no direct competition in the generative AI space, allowing it to dominate a highly lucrative market without facing the same pressures as other tech companies.</p>
-
-            <h3>4. Palantir’s Business Model Reinforces Long-Term Growth and Profitability</h3>
-            <p>Unlike typical tech companies that rely on short-term sales or subscriptions, Palantir’s business model is centered around long-term, high-value contracts with major government agencies and private corporations. These multi-year agreements provide a stable and predictable revenue stream, making Palantir’s business less susceptible to market volatility or the whims of new trends. The company’s approach fosters deep, ongoing partnerships with its clients, allowing for continuous product improvements and custom solutions. This long-term orientation makes Palantir an ideal investment for those seeking consistent growth and resilience in an unpredictable market.</p>
+            <h3>3. Expanding in Commercial Markets</h3>
+            <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. This shift means that Palantir is not just dependent on government contracts anymore. The company is helping a growing number of businesses make sense of their own data, whether it’s analyzing customer behavior, improving supply chains, or driving efficiency in operations. As Palantir diversifies its client base, it opens the door for significant growth in the future.</p>
 
             <!-- Breaking Exciting News Section -->
             <div class="breaking-news">
@@ -134,15 +279,16 @@
         <article>
             <h2>The Rise of AI: A Glimpse into the Future</h2>
             <p>Artificial Intelligence (AI) has become one of the most transformative technologies of the 21st century. From enhancing business operations to revolutionizing healthcare and education, AI is poised to reshape the world as we know it. As companies continue to invest heavily in AI, it is clear that this technology will play a significant role in our future.</p>
-            <div style="text-align: center;">
-                <!-- Image inserted from New Flickr BB Code -->
-                <a href="https://flic.kr/p/N2LvdL">
-                    <img src="https://live.staticflickr.com/1816/30212411048_2a1d7200e2.jpg" alt="Artificial Intelligence & AI & Machine Learning">
-                </a>
-                <p>
-                    <a href="https://flic.kr/p/N2LvdL">Artificial Intelligence & AI & Machine Learning</a> by
-                    <a href="https://www.flickr.com/photos/mikemacmarketing/">Mike MacKenzie</a>, on <a href="https://www.flickr.com/">Flickr </a>, on Flickr</p>
-            </div>      
+<div style="text-align: center;">
+    <!-- Image inserted from New Flickr BB Code -->
+        <a href="https://flic.kr/p/N2LvdL">
+            <img src="https://live.staticflickr.com/1816/30212411048_2a1d7200e2.jpg" alt="Artificial Intelligence & AI & Machine Learning">
+        </a>
+        <p>
+            <a href="https://flic.kr/p/N2LvdL">Artificial Intelligence & AI & Machine Learning</a> by
+            <a href="https://www.flickr.com/photos/mikemacmarketing/">Mike MacKenzie</a>, on <a href="https://www.flickr.com/">Flickr </a>, on Flickr</p>
+</div>      
+        </p> 
             <h3>AI's Role in Healthcare Innovation</h3>
             <p>In healthcare, AI-powered systems are being used to diagnose diseases, predict patient outcomes, and develop personalized treatment plans. One of the most promising advancements is in the field of <strong>AI-driven diagnostics</strong>. By analyzing vast amounts of medical data, AI can help doctors identify diseases such as cancer in their earliest stages, leading to better patient outcomes and saving lives.</p>
 
@@ -163,24 +309,24 @@
         <article>
             <h2>Breaking News: Donald Trump to Face New Legal Challenges as Trial Dates Approach</h2>
             <p>In an unexpected turn of events, former President <strong>Donald Trump</strong> is once again making headlines as he faces a new set of legal challenges. With trial dates approaching for multiple cases, the political landscape in the United States is bracing for what could be a pivotal moment in American history.</p> 
-            <div style="text-align: center;">
-                <!-- Image from Flickr with Creative Commons License -->
-                <a href="https://flic.kr/p/2oRoCMD">
-                    <img src="https://live.staticflickr.com/65535/53067465959_cdb840dab5.jpg" alt="Donald Trump" style="width: 100%; max-width: 600px; height: auto; border: 2px solid #ddd;">
-                </a>
-                <p>
-                    <a href="https://flic.kr/p/2oRoCMD">Donald Trump</a> by 
-                    <a href="https://www.flickr.com/photos/gageskidmore/">Gage Skidmore</a>, on <a href="https://www.flickr.com/">Flickr</a>
-                </p>
-            </div>      
-            <h3>Trump Faces Multiple Legal Trials</h3>
-            <p>As trial dates draw closer, Trump's legal team is working to prepare for the complex cases that lie ahead. In addition to the criminal charges, Trump is facing civil suits related to his business dealings and the January 6th Capitol riot. While some legal experts believe Trump could be exonerated in some of these cases, others argue that the legal battles will continue to create a cloud of uncertainty for the former president and his supporters.</p>
+<div style="text-align: center;">
+    <!-- Image from Flickr with Creative Commons License -->
+    <a href="https://flic.kr/p/2oRoCMD">
+        <img src="https://live.staticflickr.com/65535/53067465959_cdb840dab5.jpg" alt="Donald Trump" style="width: 100%; max-width: 600px; height: auto; border: 2px solid #ddd;">
+    </a>
+    <p>
+        <a href="https://flic.kr/p/2oRoCMD">Donald Trump</a> by 
+        <a href="https://www.flickr.com/photos/gageskidmore/">Gage Skidmore</a>, on <a href="https://www.flickr.com/">Flickr</a>
+    </p>
+</div>
+            <h3>Trump's Legal Troubles: An Overview</h3>
+            <p>Trump is currently involved in a series of legal battles that span multiple states. From allegations of financial fraud to charges related to the January 6th insurrection, Trump’s legal woes are mounting. These trials could have profound implications for his political future and the broader political landscape. Legal experts predict that the upcoming trials will dominate headlines for months to come.</p>
 
-            <h3>Political Ramifications of the Trials</h3>
-            <p>The ongoing trials have significant political implications. Many believe that the outcome of these cases will shape the trajectory of Trump's political future. Should he face conviction in any of these cases, it could severely hinder his ability to mount a successful presidential campaign in the future.</p>
+            <h3>What This Means for Trump’s 2024 Campaign</h3>
+            <p>As Trump gears up for a possible run in the 2024 presidential election, his legal troubles could impact his campaign. Supporters view the charges as politically motivated, while critics believe they are a necessary step toward accountability. How this unfolds will have a significant impact on his chances of winning back the White House.</p>
 
             <div class="cta">
-                <p>Stay Updated on This Story</p>
+                <p>Stay Updated on the Legal Saga</p>
             </div>
         </article>
     </div>

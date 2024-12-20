@@ -1,21 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <!-- SEO Meta Tags -->
-    <meta name="description" content="Truth Newspaper delivers breaking news, the latest in technology, and investment insights. Stay informed about the stock market, AI, and major news stories.">
-    <meta name="keywords" content="news, technology, stocks, investment, AI, Palantir, breaking news, business, politics">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Truth Newspaper - Latest News, Technology, and Stock Insights">
-    <meta property="og:description" content="Get the latest headlines on breaking news, stock tips, AI advancements, and more at Truth Newspaper.">
-    <meta property="og:image" content="https://yourimageurl.com/thumbnail.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Truth Newspaper - Latest News, Technology, and Stock Insights">
-    <meta name="twitter:description" content="Stay up to date with the most recent news, tech stories, and investment tips.">
-    <meta name="twitter:image" content="https://yourimageurl.com/thumbnail.jpg">
-
     <title>Truth Newspaper: Why Palantir Will Make You a Millionaire</title>
 
     <!-- Importing Fonts -->
@@ -41,15 +29,15 @@
         header {
             background-color: #d40000; /* Washington Post red */
             color: white;
-            padding: 30px 0;
+            padding: 15px 0; /* Reduced padding for tighter design */
             text-align: center;
-            border-bottom: 5px solid #222;
-            margin-bottom: 30px;
+            border-bottom: 1px solid #222; /* Subtle border */
+            margin-bottom: 0;
         }
 
         h1 {
             font-family: 'Georgia', serif;
-            font-size: 4em;
+            font-size: 2.5em; /* Smaller text size for header */
             color: white;
             margin-bottom: 0;
         }
@@ -59,17 +47,16 @@
             display: flex;
             justify-content: center;
             background-color: #222;
-            padding: 15px 0;
-            margin-bottom: 40px;
-            align-items: center; /* Align items horizontally */
+            padding: 10px 0; /* Reduced padding */
+            align-items: center;
         }
 
         .nav-bar a {
             color: white;
             text-decoration: none;
-            padding: 15px 30px;
-            margin: 0 20px;
-            font-size: 1.2em;
+            padding: 12px 20px; /* Reduced padding for better fit */
+            margin: 0 15px;
+            font-size: 1em;
             text-transform: uppercase;
             font-weight: 600;
         }
@@ -81,7 +68,7 @@
         /* Content Section */
         .container {
             display: grid;
-            grid-template-columns: 1fr; /* One column layout for mobile first */
+            grid-template-columns: 1fr;
             gap: 30px;
             margin-bottom: 40px;
         }
@@ -173,17 +160,17 @@
         /* Responsive Design */
         @media (max-width: 1024px) {
             .container {
-                grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+                grid-template-columns: 1fr 1fr;
             }
 
             .other-articles {
-                grid-template-columns: 1fr; /* One column for smaller screens */
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr; /* One column layout for mobile */
+                grid-template-columns: 1fr;
             }
 
             h1 {
@@ -194,14 +181,12 @@
                 flex-direction: column;
             }
 
-            /* Adjusting images for mobile */
             .container img {
                 width: 100%;
                 height: auto;
-                max-width: 100%; /* Ensure images scale within their container */
+                max-width: 100%;
             }
 
-            /* Reduce spacing for smaller screens */
             .cta {
                 font-size: 1em;
                 padding: 10px;
@@ -215,12 +200,10 @@
                 font-size: 0.8em;
             }
 
-            /* Adjust font size of article headers for better readability */
             h2 {
                 font-size: 1.8em;
             }
 
-            /* Adjust padding for articles */
             p {
                 padding: 0 10px 20px;
             }

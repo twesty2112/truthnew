@@ -74,7 +74,8 @@
         }
 
         article {
-            background-color: white;
+            /* Removed white background and now it blends with the website background */
+            background-color: #f4f4f4;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -85,13 +86,13 @@
 
         h2 {
             font-family: 'Georgia', serif;
-            font-size: 2.2em;
+            font-size: 1.375em; /* Increased by 25% */
             color: #333;
             padding: 20px;
         }
 
         p {
-            font-size: 1em;
+            font-size: 0.75em; /* Slightly increased font size */
             color: #555;
             padding: 0 20px 20px;
             line-height: 1.7;
@@ -119,22 +120,23 @@
 
         /* Breaking News Section */
         .breaking-news {
-            background-color: #f8f8f8;
-            border-left: 5px solid #d40000;
-            margin: 20px 0;
-            padding: 20px;
+            background-color;
+            border-left:;
+            margin: 1px 0;
+            padding: 1px;
         }
 
         .breaking-news h3 {
             font-family: 'Georgia', serif;
-            font-size: 1.8em;
+            font-size: 1.375em; /* Matching the font size of the article titles */
             color: #d40000;
             margin-bottom: 10px;
         }
 
         .breaking-news p {
-            font-size: 1.1em;
+            font-size: 0.75em; /* Smaller font size for the body text inside Breaking News */
             color: #333;
+            line-height: 1.6; /* Slightly increased line height for better readability */
         }
 
         /* Footer Styling */
@@ -201,13 +203,39 @@
             }
 
             h2 {
-                font-size: 1.8em;
+                font-size: 1.375em; /* Increased by 25% for smaller screens */
             }
 
             p {
                 padding: 0 10px 20px;
+                font-size: 0.75em; /* Slightly increased font size for readability */
             }
         }
+
+        /* Specific styles for smaller article and image layout */
+        .small-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .small-article {
+            flex: 1;
+            max-width: 60%;
+        }
+
+        .small-image {
+            flex: 1;
+            max-width: 30%; /* Reduced photo size */
+        }
+
+        .small-image img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #ddd;
+        }
+
     </style>
 </head>
 <body>
@@ -226,36 +254,43 @@
 <!-- Content Container with Grid Layout -->
 <div class="container">
     <!-- Stocks Article -->
-    <div id="stocks">
-        <article>
-            <h2>Why Palantir is Going to Make You a Millionaire</h2>
-            <p>When it comes to finding the next big opportunity in tech, <strong>Palantir Technologies (PLTR)</strong> is a name that should be at the top of your list. This revolutionary company is making waves in the world of data analytics, and if you’re looking for a stock that could significantly boost your wealth, Palantir might just be your ticket to financial success.</p>
-<div style="text-align: center;">
-    <!-- Image inserted from New Flickr BB Code -->
-    <a href="https://flic.kr/p/R5Nd4U">
-        <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland" style="width: 600px; height: 250px; object-fit: cover; object-position: top; border-bottom: 3px solid #ddd;">
-    </a>
-    <p><a href="https://flic.kr/p/R5Nd4U">Palantir pavilion, World Economic Forum, Davos, Switzerland</a> by <a href="https://www.flickr.com/photos/doctorow/">Cory Doctorow</a>, on Flickr</p>
-</div>            <h3>1. Palantir’s Dominance in Big Data Analytics</h3>
-            <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data. They have been instrumental in helping organizations across sectors from healthcare to finance make data-driven decisions. In fact, Palantir has been involved in numerous high-profile projects, including helping the U.S. government fight terrorism by analyzing intelligence data.</p>
+    <div id="stocks" class="small-container">
+        <!-- Article on Left -->
+        <div class="small-article">
+            <article>
+                <h2>Why Palantir is Going to Make You a Millionaire</h2>
+                <p>When it comes to finding the next big opportunity in tech, <strong>Palantir Technologies (PLTR)</strong> is a name that should be at the top of your list. This revolutionary company is making waves in the world of data analytics, and if you’re looking for a stock that could significantly boost your wealth, Palantir might just be your ticket to financial success.</p>
 
-            <h3>2. Long-Term, Lucrative Contracts</h3>
-            <p>One of the most compelling reasons to invest in Palantir is its <strong>unique business model</strong>. Unlike most tech companies that rely on short-term sales, Palantir has a reputation for securing <strong>long-term, high-value contracts</strong>. With long-term government contracts and partnerships with major corporations, Palantir's business model is built for sustainable growth. Their contracts are often multi-year, which gives them a reliable revenue stream that many tech companies don’t have.</p>
+                <h3>1. Palantir’s Dominance in Big Data Analytics</h3>
+                <p>At its core, Palantir is a leader in <strong>big data analytics</strong>. The company’s flagship platforms, <strong>Palantir Foundry</strong> and <strong>Palantir Gotham</strong>, are used by governments and large corporations alike to analyze and make sense of vast amounts of data. They have been instrumental in helping organizations across sectors from healthcare to finance make data-driven decisions. In fact, Palantir has been involved in numerous high-profile projects, including helping the U.S. government fight terrorism by analyzing intelligence data.</p>
 
-            <h3>3. Expanding in Commercial Markets</h3>
-            <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. This shift means that Palantir is not just dependent on government contracts anymore. The company is helping a growing number of businesses make sense of their own data, whether it’s analyzing customer behavior, improving supply chains, or driving efficiency in operations. As Palantir diversifies its client base, it opens the door for significant growth in the future.</p>
+                <h3>2. Long-Term, Lucrative Contracts</h3>
+                <p>One of the most compelling reasons to invest in Palantir is its <strong>unique business model</strong>. Unlike most tech companies that rely on short-term sales, Palantir has a reputation for securing <strong>long-term, high-value contracts</strong>. With long-term government contracts and partnerships with major corporations, Palantir's business model is built for sustainable growth. Their contracts are often multi-year, which gives them a reliable revenue stream that many tech companies don’t have.</p>
 
-            <!-- Breaking Exciting News Section -->
-            <div class="breaking-news">
-                <h3>Palantir Secures $619 Million Army Contract Extension, Shares Surge</h3>
-<p>In a major development, <strong>Palantir Technologies</strong> has announced a $619 million extension to its contract with the U.S. Army. This extension will see Palantir continue providing its advanced data analytics platforms to enhance the Army's intelligence and operational capabilities. The move marks a significant step in Palantir’s continued dominance in the defense sector. Following the announcement, Palantir’s stock rose sharply, reflecting investor confidence in the company's ongoing role in U.S. military operations. The contract extension is expected to further solidify Palantir's position as a key player in defense and intelligence technology.</p>
+                <h3>3. Expanding in Commercial Markets</h3>
+                <p>Although Palantir started out as a government contractor, it’s now making a major push into the <strong>commercial sector</strong>. This shift means that Palantir is not just dependent on government contracts anymore. The company is helping a growing number of businesses make sense of their own data, whether it’s analyzing customer behavior, improving supply chains, or driving efficiency in operations. As Palantir diversifies its client base, it opens the door for significant growth in the future.</p>
 
-            </div>
+                <div class="cta">
+                    <p>Invest in Palantir Today</p>
+                </div>
+            </article>
+        </div>
 
-            <div class="cta">
-                <p>Invest in Palantir Today</p>
-            </div>
-        </article>
+        <!-- Image on Right -->
+        <div class="small-image">
+            <a href="https://flic.kr/p/R5Nd4U">
+                <img src="https://live.staticflickr.com/673/32215763362_b62ef08e5f.jpg" alt="Palantir pavilion, World Economic Forum, Davos, Switzerland">
+            </a>
+            <p><a href="https://flic.kr/p/R5Nd4U">Palantir pavilion, World Economic Forum, Davos, Switzerland</a> by <a href="https://www.flickr.com/photos/doctorow/">Cory Doctorow</a>, on Flickr</p>
+        </div>
+    </div>
+
+    <!-- Breaking News Section -->
+    <div class="breaking-news">
+        <h3>Palantir Secures $619 Million Army Contract Extension, Shares Surge</h3>
+        <p>In a major development, <strong>Palantir Technologies</strong> has announced a $619 million extension to its contract with the U.S. Army. This extension will see Palantir continue providing its advanced data analytics platforms to enhance the Army's intelligence and operational capabilities. The move marks a significant step in Palantir’s continued dominance in the defense sector. Following the announcement, Palantir’s stock rose sharply, reflecting investor confidence in the company's ongoing role in U.S. military operations. The contract extension is expected to further solidify Palantir's position as a key player in defense and intelligence technology.</p>
+    </div>
+</div> </article>
     </div>
 
     <!-- Technology Section -->
